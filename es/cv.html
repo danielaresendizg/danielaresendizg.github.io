@@ -14,7 +14,7 @@
       --cv-h2: 1.2rem;    /* títulos de sección */
       --cv-h3: 0.8rem;    /* institución / cargo */
       --cv-text: 0.8rem;  /* párrafos y bullets */
-      --cv-tight: 1.1rem;   /* interlineado */
+      --cv-tight: 1.55;   /* interlineado (unitless) */
       --cv-gap: 28px;     /* espacio entre artículos */
     }
 
@@ -49,11 +49,11 @@
     /* Énfasis */
     .cv em{ font-style: italic; color: #333; }
 
-    /* Responsive: un toque más compacto en móvil */
+    /* Responsive interno mínimo */
     @media (max-width: 560px){
-      .cv{ --cv-h2: 1.5rem; --cv-h3: 1.05rem; --cv-text: .98rem; --cv-gap: 22px; }
+      .cv{ --cv-gap: 22px; }
     }
-    
+
     /* ===== Forzar tamaños móviles del CV ===== */
     @media (max-width: 560px){
       body.cv{ font-size: 85% !important; }
@@ -63,12 +63,11 @@
       body.cv p,
       body.cv li{ font-size:0.90rem !important; line-height:1.45 !important; }
       .cv article{ margin:0 0 16px !important; }
-     }
-    
+    }
   </style>
   <!-- ===== /Estilos específicos del CV ===== -->
 </head>
-<body>
+<body class="cv">
 <div class="wrapper">
 
   <!-- Header -->
@@ -76,19 +75,19 @@
     <div class="navbar">
       <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;">Daniela Reséndiz</a></div>
       <nav class="menu" aria-label="Principal">
-      <a href="index.html">Bio</a>
-      <a href="cv.html" aria-current="page">CV</a>
-      <a href="publication.html">Publicaciones</a>
-      <a href="projects.html">Proyectos</a>
-      <a href="blog.html">Blog</a>
-      <!-- Cambiar a EN -->
-      <a href="../en/cv.html" lang="en" hreflang="en" rel="alternate">EN</a>
-    </nav>
-  </div>
-</header>
+        <a href="index.html">Bio</a>
+        <a href="cv.html" aria-current="page">CV</a>
+        <a href="publication.html">Publicaciones</a>
+        <a href="projects.html">Proyectos</a>
+        <a href="blog.html">Blog</a>
+        <!-- Cambiar a EN -->
+        <a href="../en/cv.html" lang="en" hreflang="en" rel="alternate">EN</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- Main -->
-  <main class="main cv">
+  <main class="main">
 
     <section>
       <h2>Competencias clave</h2>
@@ -141,13 +140,12 @@
           <li>Facilité 6 mesas de trabajo con 22 organizaciones de la sociedad civil y elaboré briefs ejecutivos para la toma de decisiones.</li>
         </ul>
       </article>
-    </section>
-       
-          <article>
+
+      <article>
         <h3>Despacho de Arquitectura de Felipe Leal</h3>
         <p><em>Arquitecta Jr.</em> · ene 2015–jul 2015</p>
         <ul>
-          <li>Participación en proyecto de regeneración urbana del Centro de Córdoba, Veracruz, con un enfoque resiliente y sostenible, y diseño de viviendas en Tulum; edición de libro "Felipe Leal", de la colección Somos-Sur. </li>
+          <li>Participación en proyecto de regeneración urbana del Centro de Córdoba, Veracruz, con un enfoque resiliente y sostenible, y diseño de viviendas en Tulum; edición de libro "Felipe Leal", de la colección Somos-Sur.</li>
         </ul>
       </article>
     </section>
@@ -176,7 +174,7 @@
       <article>
         <h3>University College London (UCL), The Bartlett — Londres, Reino Unido</h3>
         <p><em>Maestría en Planificación Espacial (Space Syntax in Architecture and Cities)</em> · sep 2025</p>
-        </article>
+      </article>
 
       <article>
         <h3>Universidad Nacional Autónoma de México (UNAM) — Ciudad de México</h3>
@@ -198,16 +196,8 @@
       <h2>Premios y becas</h2>
       <ul>
         <li>Consejo Nacional de Humanidades, Ciencias y Tecnologías (México), Beca (2024).</li>
-        <li>
-          <a href="https://www.veredictas.com/en/trabajo/18725/atlas_de_lo_invisible/113" target="_blank" rel="noopener noreferrer">
-            Premio Emporia México (Oro) por la instalación “Atlas de lo Invisible: Inundación Inminente” (2024).
-          </a>
-        </li>
-        <li>
-          <a href="https://www.archdaily.cl/cl/1008934/8-instalaciones-efimeras-en-patios-historicos-de-la-ciudad-de-puebla-reflexionan-en-torno-al-agua" target="_blank" rel="noopener noreferrer">
-            Ganadora del concurso “Patio Efímero” con la instalación “Atlas de lo Invisible: Inundación Inminente”, con jurado del Sistema de Creadores de la Secretaría de Cultura (2023).
-          </a>
-        </li>
+        <li><a href="https://www.veredictas.com/en/trabajo/18725/atlas_de_lo_invisible/113" target="_blank" rel="noopener noreferrer">Premio Emporia México (Oro) por la instalación “Atlas de lo Invisible: Inundación Inminente” (2024).</a></li>
+        <li><a href="https://www.archdaily.cl/cl/1008934/8-instalaciones-efimeras-en-patios-historicos-de-la-ciudad-de-puebla-reflexionan-en-torno-al-agua" target="_blank" rel="noopener noreferrer">Ganadora del concurso “Patio Efímero” con la instalación “Atlas de lo Invisible: Inundación Inminente”, con jurado del Sistema de Creadores de la Secretaría de Cultura (2023).</a></li>
         <li>Mención Cum Laude por tesis de licenciatura en la UNAM (2019).</li>
         <li>Programa de Alto Rendimiento Académico de la UNAM — Beca (2013–2017).</li>
         <li>Beca de Summer School de la AA (2017).</li>
@@ -219,67 +209,29 @@
       <h2>Congresos, formación y difusión</h2>
       <ul>
         <!-- 2025 -->
-        <li>
-          <a href="https://urbanform.org/" target="_blank" rel="noopener noreferrer">
-            Ponencia en el International Seminar on Urban Form “Age of Artificial Intelligence” (2025).
-          </a>
-        </li>
+        <li><a href="https://urbanform.org/" target="_blank" rel="noopener noreferrer">Ponencia en el International Seminar on Urban Form “Age of Artificial Intelligence” (2025).</a></li>
 
         <!-- 2024 -->
-        <li>
-          <a href="https://www.instagram.com/p/C2xZF2ZuIE-/" target="_blank" rel="noopener noreferrer">
-            Gobernanza del riesgo y resiliencia tras el huracán Otis (2024).
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=gbG9awjzfLU" target="_blank" rel="noopener noreferrer">
-            Planeación urbana en la región Sur-Sureste de México (2024).
-          </a>
-        </li>
+        <li><a href="https://www.instagram.com/p/C2xZF2ZuIE-/" target="_blank" rel="noopener noreferrer">Gobernanza del riesgo y resiliencia tras el huracán Otis (2024).</a></li>
+        <li><a href="https://www.youtube.com/watch?v=gbG9awjzfLU" target="_blank" rel="noopener noreferrer">Planeación urbana en la región Sur-Sureste de México (2024).</a></li>
 
         <!-- 2023 -->
-        <li>
-          <a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/grupo-de-trabajo-sobre-desastres-politicas-publicas-e-instituciones" target="_blank" rel="noopener noreferrer">
-            Diseño de política nacional para la reconstrucción post-sísmica en México (2023).
-          </a>
-        </li>
-        <li>
-          <a href="https://www.gob.mx/inafed/archivo/videos?order=DESC&page=28" target="_blank" rel="noopener noreferrer">
-            Capacitación nacional en gestión del riesgo y resiliencia urbana (2023, 200+ personas funcionarias).
-          </a>
-        </li>
+        <li><a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/grupo-de-trabajo-sobre-desastres-politicas-publicas-e-instituciones" target="_blank" rel="noopener noreferrer">Diseño de política nacional para la reconstrucción post-sísmica en México (2023).</a></li>
+        <li><a href="https://www.gob.mx/inafed/archivo/videos?order=DESC&page=28" target="_blank" rel="noopener noreferrer">Capacitación nacional en gestión del riesgo y resiliencia urbana (2023, 200+ personas funcionarias).</a></li>
 
         <!-- 2022 -->
-        <li>
-          <a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/coloquio-ordenamiento-territorial-como-instrumento-de-gestion-integral-de-riesgos-socioambientales" target="_blank" rel="noopener noreferrer">
-            Ordenamiento Territorial como instrumento de la Gestión Integral del Riesgo (2022).
-          </a>
-        </li>
+        <li><a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/coloquio-ordenamiento-territorial-como-instrumento-de-gestion-integral-de-riesgos-socioambientales" target="_blank" rel="noopener noreferrer">Ordenamiento Territorial como instrumento de la Gestión Integral del Riesgo (2022).</a></li>
 
         <!-- 2021 -->
-        <li>
-          <a href="https://www.youtube.com/watch?v=B4GA1iMNraE" target="_blank" rel="noopener noreferrer">
-            Diálogos sobre resiliencia y juventud – UN75 (2021).
-          </a>
-        </li>
+        <li><a href="https://www.youtube.com/watch?v=B4GA1iMNraE" target="_blank" rel="noopener noreferrer">Diálogos sobre resiliencia y juventud – UN75 (2021).</a></li>
 
         <!-- 2020 -->
-        <li>
-          Comunicación de riesgo para el desarrollo sostenible (PNUD, 2020).
-        </li>
-        <li>
-          <a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/el-estado-de-reconstruccion-post-sismica-en-el-sur-de-mexico" target="_blank" rel="noopener noreferrer">
-            El estado de la reconstrucción post-sísmica en el sur de México (2020).
-          </a>
-        </li>
+        <li>Comunicación de riesgo para el desarrollo sostenible (PNUD, 2020).</li>
+        <li><a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/el-estado-de-reconstruccion-post-sismica-en-el-sur-de-mexico" target="_blank" rel="noopener noreferrer">El estado de la reconstrucción post-sísmica en el sur de México (2020).</a></li>
 
         <!-- Roles transversales -->
-        <li>
-          Representante técnica de SEDATU en grupos interinstitucionales de cambio climático y gestión del riesgo (2019–2024).
-        </li>
-        <li>
-          Ponencias internacionales (Japón, Kenia, Nicaragua, El Salvador) sobre política de reconstrucción y gestión del riesgo (2019–2024).
-        </li>
+        <li>Representante técnica de SEDATU en grupos interinstitucionales de cambio climático y gestión del riesgo (2019–2024).</li>
+        <li>Ponencias internacionales (Japón, Kenia, Nicaragua, El Salvador) sobre política de reconstrucción y gestión del riesgo (2019–2024).</li>
       </ul>
     </section>
 
@@ -290,7 +242,7 @@
     <div class="contact-inner">
       <div class="contact-title">Contacto<span class="hidden-mobile">:</span></div>
       <div class="contact-actions">
-        <a class="btn" href="resendizdaniela.13@gmail.com">Email</a>
+        <a class="btn" href="mailto:resendizdaniela.13@gmail.com">Email</a>
         <a class="btn" href="https://x.com/Danielaresendiz" target="_blank" rel="noreferrer">Twitter</a>
         <a class="btn" href="https://mx.linkedin.com/in/daniela-res%C3%A9ndiz-1a815010a" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
@@ -298,6 +250,7 @@
   </footer>
 
 </div>
+<!-- Si tu JS vive en assets/, usa ../assets/main.js -->
 <script src="../main.js"></script>
 </body>
 </html>
