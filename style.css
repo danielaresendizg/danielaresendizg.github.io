@@ -203,3 +203,76 @@ section a:active {
   .pubs .pub-row{ grid-template-columns: 1fr; gap:10px; padding: 18px 0; }
   .pubs .pub-year{ order:-1; color:#999; }
 }
+
+/* ====== Patch móvil sin cambiar desktop ====== */
+
+/* iOS notch-friendly sticky */
+.site-header { top: env(safe-area-inset-top); }
+
+/* Ajustes generales en pantallas pequeñas */
+@media (max-width: 600px){
+  :root { --gutter: 16px; }
+
+  /* Navbar más compacta y que puede saltar a 2 líneas */
+  .navbar { padding: 12px var(--gutter); }
+  .brand { font-size: 1.15rem; }
+  .menu {
+    gap: 14px;
+    row-gap: 8px;
+    flex-wrap: wrap;         /* permite 2 líneas si no cabe */
+    font-size: 0.95rem;
+  }
+  .menu a { padding: 8px 0; }
+
+  /* Main con más padding inferior para no tapar la barra fija */
+  .main{
+    padding: 24px var(--gutter)
+             calc(88px + env(safe-area-inset-bottom)); /* evita overlap */
+  }
+
+  /* Grid ya colapsa a 1 col a 960px; aquí solo afinamos gaps si quieres */
+  .grid { gap: 28px; }
+
+  /* Texto un pelín más legible en pantallas chicas */
+  .bio p { font-size: 1rem; }
+
+  /* Foto 100% ancho contenedor */
+  .photo { max-width: 100%; }
+
+  /* Chips un poco más grandes para tocar mejor */
+  .chip { font-size: .62rem; padding: 7px 12px; }
+
+  /* Barra de contacto: columna y con safe-areas */
+  .contact-bar { border-top: 1px solid #000; }
+  .contact-inner{
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 10px
+             calc(var(--gutter) + env(safe-area-inset-right))
+             calc(10px + env(safe-area-inset-bottom))
+             calc(var(--gutter) + env(safe-area-inset-left));
+  }
+  .contact-actions{
+    grid-auto-flow: row;     /* botones apilados */
+    grid-template-columns: 1fr 1fr; /* o 1fr para uno por fila */
+    gap: 8px;
+  }
+  .btn{
+    padding: 12px;
+    text-align: center;
+  }
+}
+
+/* Un poco más de compresión tipográfica del CV en móviles */
+@media (max-width: 560px){
+  .cv{ --cv-h2: 1.5rem; --cv-h3: 1.05rem; --cv-text: .98rem; }
+}
+
+/* Mejor foco accesible (no cambia color en desktop) */
+.menu a:focus-visible,
+.btn:focus-visible,
+.chip:focus-visible{
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+
