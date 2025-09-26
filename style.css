@@ -215,12 +215,12 @@ section a:active {
 
   /* Navbar más compacta y que puede saltar a 2 líneas */
   .navbar { padding: 12px var(--gutter); }
-  .brand { font-size: 1.15rem; }
+  .brand { font-size: 0.9rem; }
   .menu {
     gap: 14px;
     row-gap: 8px;
     flex-wrap: wrap;         /* permite 2 líneas si no cabe */
-    font-size: 0.95rem;
+    font-size: 0.8rem;
   }
   .menu a { padding: 8px 0; }
 
@@ -234,13 +234,13 @@ section a:active {
   .grid { gap: 28px; }
 
   /* Texto un pelín más legible en pantallas chicas */
-  .bio p { font-size: 1rem; }
+  .bio p { font-size: 0.8rem; }
 
   /* Foto 100% ancho contenedor */
   .photo { max-width: 100%; }
 
   /* Chips un poco más grandes para tocar mejor */
-  .chip { font-size: .62rem; padding: 7px 12px; }
+  .chip { font-size: .5rem; padding: 7px 12px; }
 
   /* Barra de contacto: columna y con safe-areas */
   .contact-bar { border-top: 1px solid #000; }
@@ -265,7 +265,7 @@ section a:active {
 
 /* Un poco más de compresión tipográfica del CV en móviles */
 @media (max-width: 560px){
-  .cv{ --cv-h2: 1.5rem; --cv-h3: 1.05rem; --cv-text: .98rem; }
+  .cv{ --cv-h2: 1rem; --cv-h3: 0.8rem; --cv-text: .7rem; }
 }
 
 /* Mejor foco accesible (no cambia color en desktop) */
