@@ -242,19 +242,40 @@ section a:active {
   /* Chips un poco más grandes para tocar mejor */
   .chip { font-size: .5rem; padding: 7px 12px; }
 
-  /* Barra de contacto: columna y con safe-areas */
-  .contact-bar { border-top: 1px solid #000; }
+/* ===== CV más compacto en móviles (forzado) ===== */
+@media (max-width: 560px){
+  /* Aumentamos especificidad: body.cv … */
+  body.cv{
+    /* si quieres reducir todo un 10–15% extra */
+    font-size: 87.5%;
+  }
+  body.cv{
+    --cv-h1: 1.4rem !important;
+    --cv-h2: 1.15rem !important;
+    --cv-h3: 0.95rem !important;
+    --cv-text: 0.9rem !important;
+    --cv-tight: 1.55 !important;   /* un poco más cerradito */
+    --cv-gap: 20px !important;
+  }
+  /* Por si hay títulos con px sueltos: */
+  body.cv h1, body.cv h2, body.cv h3 { line-height: 1.2; }
+  body.cv p, body.cv li { word-break: break-word; }
+}
+
+/* ===== Contacto: más chico y 1 columna en móvil ===== */
+@media (max-width: 600px){
+  .contact-bar { font-size: 0.95rem; }
   .contact-inner{
     grid-template-columns: 1fr;
     gap: 6px;
     padding: 8px
              calc(var(--gutter) + env(safe-area-inset-right))
-             calc(8px + env(safe-area-inset-bottom))
+             calc(10px + env(safe-area-inset-bottom))
              calc(var(--gutter) + env(safe-area-inset-left));
   }
   .contact-actions{
-    grid-auto-flow: row;     /* botones apilados */
-    grid-template-columns: 1fr 1fr; /* o 1fr para uno por fila */
+    grid-auto-flow: row;        /* apilados */
+    grid-template-columns: 1fr; /* ← fuerza 1 por fila */
     gap: 6px;
   }
   .btn{
@@ -263,10 +284,16 @@ section a:active {
   }
 }
 
-/* Un poco más de compresión tipográfica del CV en móviles */
-@media (max-width: 560px){
-  .cv{ --cv-h2: 0.8rem; --cv-h3: 0.6rem; --cv-text: .5rem; }
+/* Opcional: todavía más compacto en móviles muy chicos */
+@media (max-width: 380px){
+  body.cv{
+    --cv-h1: 1.25rem !important;
+    --cv-h2: 1.05rem !important;
+    --cv-h3: 0.9rem !important;
+    --cv-text: 0.85rem !important;
+  }
 }
+
 
 /* Mejor foco accesible (no cambia color en desktop) */
 .menu a:focus-visible,
