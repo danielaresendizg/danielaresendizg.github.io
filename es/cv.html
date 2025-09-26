@@ -54,16 +54,15 @@
       .cv{ --cv-h2: 1.5rem; --cv-h3: 1.05rem; --cv-text: .98rem; --cv-gap: 22px; }
     }
     
-  <!-- ===== Estilos específicos del CV (puedes moverlos al CSS externo si quieres) ===== -->
-  <style>
-    /* Variables para escalar rápido todo el CV */
-    .cv{
-      --cv-h1: 2rem;      /* por si usas <h1> en el CV */
-      --cv-h2: 1.2rem;    /* títulos de sección */
-      --cv-h3: 0.8rem;    /* institución / cargo */
-      --cv-text: 0.8rem;  /* párrafos y bullets */
-      --cv-tight: 1.55;   /* interlineado (unitless) */
-      --cv-gap: 28px;     /* espacio entre artículos */
+    /* ===== Forzar tamaños móviles del CV ===== */
+    @media (max-width: 560px){
+     body.cv{ font-size: 85% !important; }
+     body.cv h1{ font-size:1.30rem !important; line-height:1.20 !important; }
+     body.cv h2{ font-size:1.05rem !important; line-height:1.20 !important; }
+     body.cv h3{ font-size:0.90rem !important; line-height:1.25 !important; }
+     body.cv p,
+     body.cv li{ font-size:0.90rem !important; line-height:1.45 !important; }
+     .cv article{ margin:0 0 16px !important; }
     }
     
   </style>
