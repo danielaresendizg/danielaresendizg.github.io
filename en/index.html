@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV – Daniela Reséndiz</title>
+ <link rel="stylesheet" href="../style.css" />
+
+  <!-- ===== Estilos específicos del CV ===== -->
+  <style>
+    /* Variables para escalar rápido todo el CV */
+    .cv{
+      --cv-h1: 2rem;      /* por si usas <h1> en el CV */
+      --cv-h2: 1.2rem;      /* títulos de sección */
+      --cv-h3: 0.8rem;      /* institución / cargo */
+      --cv-text: 0.8rem;      /* párrafos y bullets */
+      --cv-tight: 1.65;     /* interlineado */
+      --cv-gap: 28px;       /* espacio entre artículos */
+    }
+
+    /* Encabezados */
+    .cv h1{ font-size: var(--cv-h1); margin: 0 0 18px; line-height: 1.2; }
+    .cv h2{
+      font-size: var(--cv-h2);
+      margin: 40px 0 14px;
+      line-height: 1.2;
+    }
+    .cv h3{
+      font-size: var(--cv-h3);
+      margin: 10px 0 6px;
+      font-weight: 650;
+      line-height: 1.35;
+    }
+
+    /* Texto y listas */
+    .cv p,
+    .cv li{
+      font-size: var(--cv-text);
+      line-height: var(--cv-tight);
+      margin: 0 0 0.5em;
+    }
+    .cv ul{ margin: 8px 0 0 18px; padding: 0; }
+    .cv li{ margin: 6px 0; }
+
+    /* Bloques / artículos */
+    .cv section{ margin-bottom: 12px; }
+    .cv article{ margin: 0 0 var(--cv-gap); }
+
+    /* Énfasis */
+    .cv em{ font-style: italic; color: #333; }
+
+    /* Responsive: un toque más compacto en móvil */
+    @media (max-width: 560px){
+      .cv{ --cv-h2: 1.5rem; --cv-h3: 1.05rem; --cv-text: .98rem; --cv-gap: 22px; }
+    }
+  </style>
+  <!-- ===== /Estilos específicos del CV ===== -->
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="navbar">
+      <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;">Daniela Reséndiz</a></div>
+      <nav class="menu" aria-label="Principal">
+      <a href="index.html">Bio</a>
+      <a href="cv.html" aria-current="page">CV</a>
+      <a href="publication.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <!-- Switch a ES -->
+      <a href="../es/cv.html" lang="es" hreflang="es" rel="alternate">ES</a>
+    </nav>
+  </div>
+</header>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="grid">
+      <!-- Left: bio -->
+      <section class="bio">
+        <p><strong>Specialist in urban policy, spatial planning, and climate adaptation</strong> with over eight years of experience advancing social, territorial, and environmental justice. Bridges public policy, applied research, and technological tools (GeoAI) to turn evidence into high-impact decisions.</p>
+
+        <p>She has led multidisciplinary teams and collaborated with governments, international organizations, and academia on disaster risk reduction and climate change policies across housing, mobility, and urban development. As Director of Risk Management in the Government of Mexico, she advanced official standards, prevention and reconstruction programs, and specialized technical projects.</p>
+
+        <p>She holds an MSc in spatial planning (space syntax) from The Bartlett, UCL (London), with additional training at the Architectural Association and the University of São Paulo, and a Bachelor’s in Architecture from UNAM (with honors). Skilled in programming, spatial statistics, network analysis, remote sensing, and climate simulations.</p>
+
+        <p>Alongside professional practice, she teaches at UNAM and the School of Public Administration, and has represented Mexico at international forums —including the UN— engaging with countries such as Japan, the Netherlands, Kenya, and Italy.</p>
+
+
+        <div class="section-label">INTERESTS</div>
+        <div class="chips" aria-label="Intereses">
+          <span class="chip">SPATIAL ANALYSIS</span>
+          <span class="chip">RESILIENCE</span>
+          <span class="chip">CLIMATE CHANGE</span>
+          <span class="chip">NETWORK ANALYSIS</span>
+          <span class="chip">SPATIAL INEQUALITY</span>
+          <span class="chip">GENDER</span>
+          <span class="chip">PUBLIC HEALTH</span>
+          <span class="chip">EVIDENCE-BASED POLICY</span>
+        </div>
+      </section>
+
+      <!-- Right: photo -->
+      <aside>
+        <img class="photo" src="https://raw.githubusercontent.com/danielaresendizg/danielaresendizg.github.io/main/photo_website.jpg" alt="Retrato de Daniela" />
+        <div class="photo-caption muted">Daniela (her/she)</div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Sticky contact bar -->
+  <footer class="contact-bar" role="contentinfo">
+    <div class="contact-inner">
+      <div class="contact-title">Contacto<span class="hidden-mobile">:</span></div>
+      <div class="contact-actions">
+        <a class="btn" href="mailto:tu-resendizdaniela.13@gmail.com">Email</a>
+        <a class="btn" href="https://x.com/Danielaresendiz" target="_blank" rel="noreferrer">Twitter</a>
+        <a class="btn" href="https://mx.linkedin.com/in/daniela-res%C3%A9ndiz-1a815010a" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script src="../main.js"></script>
+</body>
+</html>
+
