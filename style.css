@@ -246,26 +246,26 @@ section a:active {
   .contact-bar { border-top: 1px solid #000; }
   .contact-inner{
     grid-template-columns: 1fr;
-    gap: 8px;
-    padding: 10px
+    gap: 6px;
+    padding: 8px
              calc(var(--gutter) + env(safe-area-inset-right))
-             calc(10px + env(safe-area-inset-bottom))
+             calc(8px + env(safe-area-inset-bottom))
              calc(var(--gutter) + env(safe-area-inset-left));
   }
   .contact-actions{
     grid-auto-flow: row;     /* botones apilados */
     grid-template-columns: 1fr 1fr; /* o 1fr para uno por fila */
-    gap: 8px;
+    gap: 6px;
   }
   .btn{
-    padding: 12px;
+    padding: 10px;
     text-align: center;
   }
 }
 
 /* Un poco más de compresión tipográfica del CV en móviles */
 @media (max-width: 560px){
-  .cv{ --cv-h2: 1rem; --cv-h3: 0.8rem; --cv-text: .7rem; }
+  .cv{ --cv-h2: 0.8rem; --cv-h3: 0.6rem; --cv-text: .5rem; }
 }
 
 /* Mejor foco accesible (no cambia color en desktop) */
