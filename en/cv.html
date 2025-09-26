@@ -6,16 +6,16 @@
   <title>CV – Daniela Reséndiz</title>
   <link rel="stylesheet" href="../style.css" />
 
-  <!-- ===== Estilos específicos del CV ===== -->
+  <!-- ===== Estilos específicos del CV (puedes moverlos al CSS externo si quieres) ===== -->
   <style>
     /* Variables para escalar rápido todo el CV */
     .cv{
       --cv-h1: 2rem;      /* por si usas <h1> en el CV */
-      --cv-h2: 1.2rem;      /* títulos de sección */
-      --cv-h3: 0.8rem;      /* institución / cargo */
-      --cv-text: 0.8rem;      /* párrafos y bullets */
-      --cv-tight: 1.1rem;     /* interlineado */
-      --cv-gap: 28px;       /* espacio entre artículos */
+      --cv-h2: 1.2rem;    /* títulos de sección */
+      --cv-h3: 0.8rem;    /* institución / cargo */
+      --cv-text: 0.8rem;  /* párrafos y bullets */
+      --cv-tight: 1.55;   /* interlineado (unitless) */
+      --cv-gap: 28px;     /* espacio entre artículos */
     }
 
     /* Encabezados */
@@ -49,28 +49,34 @@
     /* Énfasis */
     .cv em{ font-style: italic; color: #333; }
 
-    /* Responsive: un toque más compacto en móvil */
+    /* Responsive interno mínimo (tu patch externo manda en móvil) */
     @media (max-width: 560px){
-      .cv{ --cv-h2: 1.5rem; --cv-h3: 1.05rem; --cv-text: .98rem; --cv-gap: 22px; }
+      .cv{ --cv-gap: 22px; }
     }
   </style>
   <!-- ===== /Estilos específicos del CV ===== -->
-<header class="site-header">
-  <div class="navbar">
-    <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;">Daniela Reséndiz</a></div>
-    <nav class="menu" aria-label="Main">
-      <a href="index.html">Bio</a>
-      <a href="cv.html" aria-current="page">CV</a>
-      <a href="publication.html">Publications</a>
-      <a href="projects.html">Projects</a>
-      <a href="blog.html">Blog</a>
-      <a href="../es/cv.html" lang="es" hreflang="es" rel="alternate">ES</a>
-    </nav>
-  </div>
-</header>
+</head>
+
+<body class="cv">
+<div class="wrapper">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="navbar">
+      <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;">Daniela Reséndiz</a></div>
+      <nav class="menu" aria-label="Main">
+        <a href="index.html">Bio</a>
+        <a href="cv.html" aria-current="page">CV</a>
+        <a href="publication.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="../es/cv.html" lang="es" hreflang="es" rel="alternate">ES</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- Main -->
-  <main class="main cv">
+  <main class="main">
 
     <section>
       <h2>Key Competencies</h2>
@@ -88,13 +94,13 @@
 
       <article>
         <h3>Ministry of Urban Development, Federal Government of México (SEDATU) — Mexico City</h3>
-        <p><em>Director of Risk Management</em> · May 2022–Oct 2024<br/>
+        <p><em>Director of Risk Management</em> · May 2022–Oct 2024</p>
         <ul>
           <li>Coordinated the technical closure of the National Fund of Disasters at the federal level: reviewed and channelled 2,401 housing and 177 urban road projects into reconstruction and social housing programmes, ensuring technical and legal compliance.</li>
           <li>Drafted, led public consultation, and published NOM-006-SEDATU-2024: the first mandatory national risk and resilience regulation for urban development.</li>
           <li>Integrated geospatial risk data into the National Urban System with the IDB and GIZ; validated methodologies for risk prioritization in urban planning.</li>
-          <li>Participated in the technical committee for the preventive projects fund of approximately USD 12.4 million</li>
-          <li>Conducted the development of technical projects and studies; included landslide risk studies benefiting 18,963 people</li>
+          <li>Participated in the technical committee for the preventive projects fund of approximately USD 12.4 million.</li>
+          <li>Conducted the development of technical projects and studies; included landslide risk studies benefiting 18,963 people.</li>
           <li>Led gender-responsive and culturally-sensitive relocation processes in 17 states, including priorities relocations of indigenous communities; 600 families in the south of México (sea level rise adaptation cases in Mexico).</li>
           <li>Trained over 200 municipal, metropolitan and state officials in disaster risk management and urban resilience.</li>
           <li>Represented the minister and subminister in the national adaptation policy and climate risk working groups (national federal entities and the World Bank, IBD, GIZ).</li>
@@ -131,8 +137,8 @@
 
       <article>
         <h3>Public Administration School of Mexico City — Mexico City</h3>
-        <p><em>Master’s Lecturer, Risk Management</em> · Jun 2024</br>
-        Delivered graduate modules on disaster risk governance and urban resilience, including regulatory frameworks and participatory methods for public officials.
+        <p><em>Master’s Lecturer, Risk Management</em> · Jun 2024<br/>
+        Delivered graduate modules on disaster risk governance and urban resilience, including regulatory frameworks and participatory methods for public officials.</p>
       </article>
 
       <article>
@@ -150,9 +156,8 @@
       <article>
         <h3>University College London (UCL), The Bartlett — London, UK</h3>
         <p><em>Master of Science in spatial planning (Space Syntax in Architecture and Cities)</em> · Sep 2024–Sep 2025</p>
-      <article>
-      </section>
-        
+      </article>
+
       <article>
         <h3>National Autonomous University of Mexico (UNAM) — Mexico City</h3>
         <p><em>Bachelor in Architecture, First Class</em> · Aug 2012–Dec 2017</p>
@@ -162,27 +167,19 @@
         <h3>University of São Paulo (USP) — São Paulo, Brazil</h3>
         <p><em>Architecture and Urbanism (Exchange Program)</em> · Aug 2015–Jun 2016</p>
       </article>
-        
+
       <article>
         <h3>Architectural Association (Summer Workshop) — London, UK</h3>
         <p><em>Landscape Architecture and Urbanism</em> · Jul 2017</p>
       </article>
     </section>
-  
+
     <section>
       <h2>Awards and Grants</h2>
       <ul>
         <li>National Council of Science and Technology of México, Scholarship. (2024)</li>
-    <li>
-      <a href="https://www.veredictas.com/en/trabajo/18725/atlas_de_lo_invisible/113" target="_blank" rel="noopener noreferrer">
-        Emporia Mexico Gold Prize with the installation ‘Atlas of the Invisible: Imminent Flooding’ (2024).
-      </a>
-    </li>
-    <li>
-      <a href="https://www.archdaily.cl/cl/1008934/8-instalaciones-efimeras-en-patios-historicos-de-la-ciudad-de-puebla-reflexionan-en-torno-al-agua" target="_blank" rel="noopener noreferrer">
-        Winner of the ‘Ephemeral Patio’ contest with the installation ‘Atlas of the Invisible: Imminent Flood’, with a jury composed of members of the Creators System of the Ministry of Culture of Mexico (2023).
-      </a>
-     </li>
+        <li><a href="https://www.veredictas.com/en/trabajo/18725/atlas_de_lo_invisible/113" target="_blank" rel="noopener noreferrer">Emporia Mexico Gold Prize with the installation ‘Atlas of the Invisible: Imminent Flooding’ (2024).</a></li>
+        <li><a href="https://www.archdaily.cl/cl/1008934/8-instalaciones-efimeras-en-patios-historicos-de-la-ciudad-de-puebla-reflexionan-en-torno-al-agua" target="_blank" rel="noopener noreferrer">Winner of the ‘Ephemeral Patio’ contest with the installation ‘Atlas of the Invisible: Imminent Flood’, with a jury composed of members of the Creators System of the Ministry of Culture of Mexico (2023).</a></li>
         <li>Cum Laude Honours for Bachelor's Thesis at the National Autonomous University of México (2019).</li>
         <li>High Academic Performance Programme of the National Autonomous University of México — Scholarship (2013–2017).</li>
         <li>AA Summer School Scholarship (2017).</li>
@@ -190,73 +187,35 @@
       </ul>
     </section>
 
-<section>
-  <h2>Conferences, Training &amp; Dissemination</h2>
-  <ul>
-    <!-- 2025 -->
-    <li>
-      <a href="https://urbanform.org/" target="_blank" rel="noopener noreferrer">
-        Presentation at International Seminar on Urban Form “Age of Artificial Intelligence” (2025).
-      </a>
-    </li>
+    <section>
+      <h2>Conferences, Training &amp; Dissemination</h2>
+      <ul>
+        <!-- 2025 -->
+        <li><a href="https://urbanform.org/" target="_blank" rel="noopener noreferrer">Presentation at International Seminar on Urban Form “Age of Artificial Intelligence” (2025).</a></li>
 
-    <!-- 2024 -->
-    <li>
-      <a href="https://www.instagram.com/p/C2xZF2ZuIE-/" target="_blank" rel="noopener noreferrer">
-        Disaster risk governance and resilience after Hurricane Otis (2024).
-      </a>
-    </li>
-    <li>
-      <a href="https://www.youtube.com/watch?v=gbG9awjzfLU" target="_blank" rel="noopener noreferrer">
-        Urban Planning in the South-Southeast Region of México (2024).
-      </a>
-    </li>
+        <!-- 2024 -->
+        <li><a href="https://www.instagram.com/p/C2xZF2ZuIE-/" target="_blank" rel="noopener noreferrer">Disaster risk governance and resilience after Hurricane Otis (2024).</a></li>
+        <li><a href="https://www.youtube.com/watch?v=gbG9awjzfLU" target="_blank" rel="noopener noreferrer">Urban Planning in the South-Southeast Region of México (2024).</a></li>
 
-    <!-- 2023 -->
-    <li>
-      <a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/grupo-de-trabajo-sobre-desastres-politicas-publicas-e-instituciones" target="_blank" rel="noopener noreferrer">
-        National policy design for post-earthquake reconstruction of México (2023).
-      </a>
-    </li>
-    <li>
-      <a href="https://www.gob.mx/inafed/archivo/videos?order=DESC&page=28" target="_blank" rel="noopener noreferrer">
-        National training in risk management and urban resilience (2023, 200+ officials).
-      </a>
-    </li>
+        <!-- 2023 -->
+        <li><a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/grupo-de-trabajo-sobre-desastres-politicas-publicas-e-instituciones" target="_blank" rel="noopener noreferrer">National policy design for post-earthquake reconstruction of México (2023).</a></li>
+        <li><a href="https://www.gob.mx/inafed/archivo/videos?order=DESC&page=28" target="_blank" rel="noopener noreferrer">National training in risk management and urban resilience (2023, 200+ officials).</a></li>
 
-    <!-- 2022 -->
-    <li>
-      <a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/coloquio-ordenamiento-territorial-como-instrumento-de-gestion-integral-de-riesgos-socioambientales" target="_blank" rel="noopener noreferrer">
-        Land Use Planning as an Instrument of Disaster Risk Reduction Management (2022).
-      </a>
-    </li>
+        <!-- 2022 -->
+        <li><a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/coloquio-ordenamiento-territorial-como-instrumento-de-gestion-integral-de-riesgos-socioambientales" target="_blank" rel="noopener noreferrer">Land Use Planning as an Instrument of Disaster Risk Reduction Management (2022).</a></li>
 
-    <!-- 2021 -->
-    <li>
-      <a href="https://www.youtube.com/watch?v=B4GA1iMNraE&fbclid=IwZXh0bgNhZW0CMTEAAR6L0jl2451tF-YJRerKjOkjG7E9bvKrn9w_JifpmGvkfhRok8FZYwe6oWApug_aem_oNDKbJJqL5mqX-DBayharQ" target="_blank" rel="noopener noreferrer">
-        Dialogues on resilience and youth – UN75 (2021).
-      </a>
-    </li>
+        <!-- 2021 -->
+        <li><a href="https://www.youtube.com/watch?v=B4GA1iMNraE" target="_blank" rel="noopener noreferrer">Dialogues on resilience and youth – UN75 (2021).</a></li>
 
-    <!-- 2020 -->
-    <li>
-      Risk communication for sustainable development (UNDP, 2020).
-    </li>
-    <li>
-      <a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/el-estado-de-reconstruccion-post-sismica-en-el-sur-de-mexico" target="_blank" rel="noopener noreferrer">
-        The state of post-seismic reconstruction in southern Mexico (2020).
-      </a>
-    </li>
+        <!-- 2020 -->
+        <li>Risk communication for sustainable development (UNDP, 2020).</li>
+        <li><a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/el-estado-de-reconstruccion-post-sismica-en-el-sur-de-mexico" target="_blank" rel="noopener noreferrer">The state of post-seismic reconstruction in southern Mexico (2020).</a></li>
 
-    <!-- Roles transversales (sin año único, rango 2019–2024) -->
-    <li>
-      Technical representative of the Ministry of Urban Development at interagency climate change and risk management working groups (2019–2024).
-    </li>
-    <li>
-      International presentations (Japan, Holanda, Kenya, Nicaragua, El Salvador) on reconstruction policy and risk management (2019–2024).
-    </li>
-  </ul>
-</section>
+        <!-- Roles transversales -->
+        <li>Technical representative of the Ministry of Urban Development at interagency climate change and risk management working groups (2019–2024).</li>
+        <li>International presentations (Japan, Holanda, Kenya, Nicaragua, El Salvador) on reconstruction policy and risk management (2019–2024).</li>
+      </ul>
+    </section>
 
   </main>
 
@@ -272,7 +231,7 @@
     </div>
   </footer>
 
-</div>
+</div><!-- /.wrapper -->
 <script src="../assets/main.js"></script>
 </body>
 </html>
