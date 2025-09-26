@@ -242,29 +242,11 @@ section a:active {
   /* Chips un poco más grandes para tocar mejor */
   .chip { font-size: .5rem; padding: 7px 12px; }
 
-/* ===== CV más compacto en móviles (forzado) ===== */
-@media (max-width: 560px){
-  /* Aumentamos especificidad: body.cv … */
-  body.cv{
-    /* si quieres reducir todo un 10–15% extra */
-    font-size: 87.5%;
-  }
-  body.cv{
-    --cv-h1: 1.4rem !important;
-    --cv-h2: 1.15rem !important;
-    --cv-h3: 0.95rem !important;
-    --cv-text: 0.9rem !important;
-    --cv-tight: 1.55 !important;   /* un poco más cerradito */
-    --cv-gap: 20px !important;
-  }
-  /* Por si hay títulos con px sueltos: */
-  body.cv h1, body.cv h2, body.cv h3 { line-height: 1.2; }
-  body.cv p, body.cv li { word-break: break-word; }
-}
-
-/* ===== Contacto: más chico y 1 columna en móvil ===== */
+/* ====== CONTACTO: versión móvil compacta ====== */
 @media (max-width: 600px){
-  .contact-bar { font-size: 0.95rem; }
+  /* Opcional: que deje de ser fija y baje como sección normal */
+  .contact-bar{ position: static; font-size: clamp(12px, 3.4vw, 14px) !important; }
+
   .contact-inner{
     grid-template-columns: 1fr;
     gap: 6px;
@@ -273,25 +255,39 @@ section a:active {
              calc(10px + env(safe-area-inset-bottom))
              calc(var(--gutter) + env(safe-area-inset-left));
   }
+
+  .contact-title{ font-weight: 700; font-size: 1rem; }
   .contact-actions{
-    grid-auto-flow: row;        /* apilados */
-    grid-template-columns: 1fr; /* ← fuerza 1 por fila */
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;   /* 1 botón por fila */
     gap: 6px;
   }
   .btn{
-    padding: 10px;
-    text-align: center;
+    width: 100%;
+    padding: 10px 12px;
+    line-height: 1.2;
+    font-size: .95em;
+    border-radius: 4px;
   }
 }
-
-/* Opcional: todavía más compacto en móviles muy chicos */
+/* Ultra-compacto en pantallas muy chicas */
 @media (max-width: 380px){
-  body.cv{
-    --cv-h1: 1.25rem !important;
-    --cv-h2: 1.05rem !important;
-    --cv-h3: 0.9rem !important;
-    --cv-text: 0.85rem !important;
-  }
+  .btn{ padding: 8px 10px; font-size: .9em; }
+}
+
+/* ====== CV: forzar reducción en móvil ====== */
+@media (max-width: 560px){
+  /* baja el “root” del CV por si hay tamaños heredados */
+  body.cv, .cv{ font-size: 85% !important; }
+
+  /* fuerza títulos/párrafos aunque haya px sueltos en el HTML */
+  body.cv h1{ font-size: 1.3rem !important; line-height: 1.2 !important; }
+  body.cv h2{ font-size: 1.05rem !important; line-height: 1.2 !important; }
+  body.cv h3{ font-size: 0.9rem !important; line-height: 1.25 !important; }
+  body.cv p,
+  body.cv li{ font-size: 0.9rem !important; line-height: 1.45 !important; }
+
+  .cv article{ margin: 0 0 16px !important; }
 }
 
 
