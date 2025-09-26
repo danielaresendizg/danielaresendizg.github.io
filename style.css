@@ -204,49 +204,38 @@ section a:active {
   .pubs .pub-year{ order:-1; color:#999; }
 }
 
-/* ====== Patch móvil sin cambiar desktop ====== */
+/* ====== Patch móvil sin cambiar desktop (corregido) ====== */
 
 /* iOS notch-friendly sticky */
 .site-header { top: env(safe-area-inset-top); }
 
-/* Ajustes generales en pantallas pequeñas */
+/* Todo móvil ≤600px en un solo @media */
 @media (max-width: 600px){
   :root { --gutter: 16px; }
 
-  /* Navbar más compacta y que puede saltar a 2 líneas */
+  /* Navbar compacta */
   .navbar { padding: 12px var(--gutter); }
   .brand { font-size: 0.9rem; }
   .menu {
     gap: 14px;
     row-gap: 8px;
-    flex-wrap: wrap;         /* permite 2 líneas si no cabe */
+    flex-wrap: wrap;
     font-size: 0.8rem;
   }
   .menu a { padding: 8px 0; }
 
-  /* Main con más padding inferior para no tapar la barra fija */
+  /* Como la barra ya NO es fija, quitamos el gran padding inferior */
   .main{
-    padding: 24px var(--gutter)
-             calc(88px + env(safe-area-inset-bottom)); /* evita overlap */
+    padding: 24px var(--gutter) 24px;
   }
 
-  /* Grid ya colapsa a 1 col a 960px; aquí solo afinamos gaps si quieres */
   .grid { gap: 28px; }
-
-  /* Texto un pelín más legible en pantallas chicas */
   .bio p { font-size: 0.8rem; }
-
-  /* Foto 100% ancho contenedor */
   .photo { max-width: 100%; }
-
-  /* Chips un poco más grandes para tocar mejor */
   .chip { font-size: .5rem; padding: 7px 12px; }
 
-/* ====== CONTACTO: versión móvil compacta ====== */
-@media (max-width: 600px){
-  /* Opcional: que deje de ser fija y baje como sección normal */
+  /* ===== CONTACTO: compacto y en una columna ===== */
   .contact-bar{ position: static; font-size: clamp(12px, 3.4vw, 14px) !important; }
-
   .contact-inner{
     grid-template-columns: 1fr;
     gap: 6px;
@@ -255,11 +244,10 @@ section a:active {
              calc(10px + env(safe-area-inset-bottom))
              calc(var(--gutter) + env(safe-area-inset-left));
   }
-
   .contact-title{ font-weight: 700; font-size: 1rem; }
   .contact-actions{
     grid-auto-flow: row;
-    grid-template-columns: 1fr;   /* 1 botón por fila */
+    grid-template-columns: 1fr; /* 1 botón por fila */
     gap: 6px;
   }
   .btn{
@@ -270,32 +258,27 @@ section a:active {
     border-radius: 4px;
   }
 }
+
 /* Ultra-compacto en pantallas muy chicas */
 @media (max-width: 380px){
   .btn{ padding: 8px 10px; font-size: .9em; }
 }
 
-/* ====== CV: forzar reducción en móvil ====== */
+/* ===== CV: forzar reducción en móvil ===== */
 @media (max-width: 560px){
-  /* baja el “root” del CV por si hay tamaños heredados */
   body.cv, .cv{ font-size: 85% !important; }
-
-  /* fuerza títulos/párrafos aunque haya px sueltos en el HTML */
   body.cv h1{ font-size: 1.3rem !important; line-height: 1.2 !important; }
   body.cv h2{ font-size: 1.05rem !important; line-height: 1.2 !important; }
   body.cv h3{ font-size: 0.9rem !important; line-height: 1.25 !important; }
   body.cv p,
   body.cv li{ font-size: 0.9rem !important; line-height: 1.45 !important; }
-
   .cv article{ margin: 0 0 16px !important; }
 }
 
-
-/* Mejor foco accesible (no cambia color en desktop) */
+/* Accesibilidad foco */
 .menu a:focus-visible,
 .btn:focus-visible,
 .chip:focus-visible{
   outline: 2px solid #111;
   outline-offset: 2px;
 }
-
