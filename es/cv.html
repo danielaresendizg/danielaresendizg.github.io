@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV – Daniela Reséndiz</title>
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- ===== Estilos específicos del CV ===== -->
+  <style>
+    /* Variables para escalar rápido todo el CV */
+    .cv{
+      --cv-h1: 2rem;      /* por si usas <h1> en el CV */
+      --cv-h2: 1.2rem;    /* títulos de sección */
+      --cv-h3: 0.8rem;    /* institución / cargo */
+      --cv-text: 0.8rem;  /* párrafos y bullets */
+      --cv-tight: 1.1rem;   /* interlineado */
+      --cv-gap: 28px;     /* espacio entre artículos */
+    }
+
+    /* Encabezados */
+    .cv h1{ font-size: var(--cv-h1); margin: 0 0 18px; line-height: 1.2; }
+    .cv h2{
+      font-size: var(--cv-h2);
+      margin: 40px 0 14px;
+      line-height: 1.2;
+    }
+    .cv h3{
+      font-size: var(--cv-h3);
+      margin: 10px 0 6px;
+      font-weight: 650;
+      line-height: 1.35;
+    }
+
+    /* Texto y listas */
+    .cv p,
+    .cv li{
+      font-size: var(--cv-text);
+      line-height: var(--cv-tight);
+      margin: 0 0 0.5em;
+    }
+    .cv ul{ margin: 8px 0 0 18px; padding: 0; }
+    .cv li{ margin: 6px 0; }
+
+    /* Bloques / artículos */
+    .cv section{ margin-bottom: 12px; }
+    .cv article{ margin: 0 0 var(--cv-gap); }
+
+    /* Énfasis */
+    .cv em{ font-style: italic; color: #333; }
+
+    /* Responsive: un toque más compacto en móvil */
+    @media (max-width: 560px){
+      .cv{ --cv-h2: 1.5rem; --cv-h3: 1.05rem; --cv-text: .98rem; --cv-gap: 22px; }
+    }
+  </style>
+  <!-- ===== /Estilos específicos del CV ===== -->
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="navbar">
+      <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;">Daniela Reséndiz</a></div>
+      <nav class="menu" aria-label="Principal">
+      <a href="index.html">Bio</a>
+      <a href="cv.html" aria-current="page">CV</a>
+      <a href="publication.html">Publicaciones</a>
+      <a href="projects.html">Proyectos</a>
+      <a href="blog.html">Blog</a>
+      <!-- Cambiar a EN -->
+      <a href="../en/cv.html" lang="en" hreflang="en" rel="alternate">EN</a>
+    </nav>
+  </div>
+</header>
+
+  <!-- Main -->
+  <main class="main cv">
+
+    <section>
+      <h2>Competencias clave</h2>
+      <ul>
+        <li><strong>Política pública y gestión de programas:</strong> Redacción de políticas; policy briefs; diseño de TdR; presupuestación de proyectos; coordinación interinstitucional; enfoque de género e interculturalidad.</li>
+        <li><strong>Adaptación climática y gestión del riesgo:</strong> Marcos normativos nacionales y locales; análisis de vulnerabilidad multicriterio; mapeo de riesgo; diagnósticos; diseño de medidas de adaptación.</li>
+        <li><strong>Análisis geoespacial y ciencia de datos:</strong> ArcGIS, QGIS, Python, R, SPSS, HEC-RAS; diagnósticos espaciales; análisis multicriterio y de redes; fotogrametría con dron; space syntax; aprendizaje automático; simulaciones de modelos longitudinales.</li>
+        <li><strong>Diseño, comunicación y fortalecimiento de capacidades:</strong> AutoCAD, Rhino–Grasshopper, Adobe CC; informes técnicos, infografías; capacitación a funcionariado y equipos interdisciplinarios.</li>
+        <li><strong>Idiomas:</strong> Español (nativo), inglés (avanzado), portugués (avanzado).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Experiencia profesional</h2>
+
+      <article>
+        <h3>Secretaría de Desarrollo Agrario, Territorial y Urbano (SEDATU) — Gobierno de México · Ciudad de México</h3>
+        <p><em>Directora de Gestión de Riesgos</em> · may 2022–oct 2024</p>
+        <ul>
+          <li>Coordiné el cierre técnico del Fondo de Desastres a nivel federal: revisión y canalización de 2,401 proyectos de vivienda y 177 de vialidad urbana a programas de reconstrucción y vivienda social, garantizando el cumplimiento técnico y legal.</li>
+          <li>Redacté, conduje la consulta pública y publiqué la NOM-006-SEDATU-2024: primera regulación nacional obligatoria de riesgo para el desarrollo urbano, aplicable a 2,457 municipios.</li>
+          <li>Integré datos geoespaciales de riesgo al Sistema Urbano Nacional con el BID y la GIZ; validé metodologías de priorización de riesgo en la planeación urbana.</li>
+          <li>Gestioné un fondo de proyectos preventivos de ~USD 12.4 millones; coordiné estudios de riesgo por deslizamientos que beneficiaron a 18,963 personas.</li>
+          <li>Conduje procesos de reubicación con enfoque de género y pertinencia cultural en 17 estados, incluidas reubicaciones prioritarias de comunidades indígenas; 600 familias en el sur de México (casos de adaptación a la subida del nivel del mar).</li>
+          <li>Capacité a más de 200 funcionarias/os municipales, metropolitanos y estatales en gestión del riesgo de desastres y resiliencia urbana.</li>
+          <li>Representé a la secretaría y subsecretaría en mesas nacionales de política de adaptación y riesgo climático (INECC, SEMARNAT, CONAGUA, CFE, SSPC, BID, GIZ, BM) y contribuí a la política pública de adaptación con la SEMARNAT.</li>
+          <li>Encabecé la elaboración de reportes del Marco de Sendai y el informe voluntario de medio término de la secretaría ante la UNDRR.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>SEDATU — Subsecretaría de Desarrollo Urbano · Ciudad de México</h3>
+        <p><em>Subdirectora de Proyectos Especiales</em> · ene 2019–may 2022</p>
+        <ul>
+          <li>Operé la estrategia de riesgo del Programa Nacional de Reconstrucción (PNR) en 11 estados: coordiné 120 estudios técnicos (geología, geofísica e hidrología) que informaron la reconstrucción de 62,863 viviendas, 7 proyectos ejecutivos y 10 estudios de prevención (≈ USD 2.6M).</li>
+          <li>Diseñé e implementé el Inventario Nacional de Zonas de Riesgo (130 casos en 90 municipios); lideré estudios de reubicación y diagnósticos de prevención de inundaciones en el sur de México.</li>
+          <li>Brindé asesoría técnica para la NOM-003-SEDATU-2023; autoría de manuales metodológicos para desarrollo territorial.</li>
+          <li>Coordiné la colaboración interinstitucional con 8 entidades federales en la Comisión Intersecretarial de Reconstrucción para vivienda, infraestructura estratégica y patrimonio.</li>
+          <li>Conduje talleres participativos con comunidades afectadas, integrando conocimiento local en los diagnósticos territoriales.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Equipo de Transición del Gobierno Federal — Ciudad de México</h3>
+        <p><em>Asesora en Política de Gestión del Riesgo de Desastres</em> · jun 2018–dic 2018</p>
+        <ul>
+          <li>Coordiné diagnósticos multisectoriales tras los sismos de 2017 (208,326 daños valorados en vivienda, infraestructura y patrimonio); muestreo estratificado (n=3,250) e informes para definir el programa nacional prioritario (2019–2024).</li>
+          <li>Apoyé la justificación y aprobación presupuestal de fondos iniciales para el PNR (USD 400M) y la reconstrucción de Puebla (USD 7.5M).</li>
+          <li>Contribuí al Comité de Gobernanza de la Reconstrucción (CIR) y al grupo “Build Back Better” para reconstrucción y reducción del riesgo.</li>
+          <li>Facilité 6 mesas de trabajo con 22 organizaciones de la sociedad civil y elaboré briefs ejecutivos para la toma de decisiones.</li>
+        </ul>
+      </article>
+    </section>
+       
+          <article>
+        <h3>Despacho de Arquitectura de Felipe Leal</h3>
+        <p><em>Arquitecta Jr.</em> · ene 2015–jul 2015</p>
+        <ul>
+          <li>Participación en proyecto de regeneración urbana del Centro de Córdoba, Veracruz, con un enfoque resiliente y sostenible, y diseño de viviendas en Tulum; edición de libro "Felipe Leal", de la colección Somos-Sur. </li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Experiencia docente</h2>
+
+      <article>
+        <h3>Escuela de Administración Pública de la Ciudad de México — Ciudad de México</h3>
+        <p><em>Docente de Maestría, Gestión de Riesgos</em> · jun 2024</p>
+        <p>Impartí módulos de posgrado sobre gobernanza del riesgo de desastres y resiliencia urbana, incluyendo marcos regulatorios y métodos participativos para el sector público.</p>
+      </article>
+
+      <article>
+        <h3>UNAM — Facultad de Arquitectura — Ciudad de México</h3>
+        <p><em>Conferencista invitada, Seminario “Estudio RX”</em> · 2024/22</p>
+        <p>Charlas sobre cambio climático, riesgos hidrometeorológicos y olas de calor. Acompañamiento a tesis con análisis espacial.</p>
+        <p><em>Profesora adjunta, Seminario de Titulación “Intersticios”</em> · ago 2017–jun 2018</p>
+        <p>Coordinación de talleres y tutoría en resiliencia urbana, enfoques ecológicos y herramientas SIG para planeación urbana.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Formación académica</h2>
+
+      <article>
+        <h3>University College London (UCL), The Bartlett — Londres, Reino Unido</h3>
+        <p><em>Maestría en Planificación Espacial (Space Syntax in Architecture and Cities)</em> · sep 2025</p>
+        </article>
+
+      <article>
+        <h3>Universidad Nacional Autónoma de México (UNAM) — Ciudad de México</h3>
+        <p><em>Licenciatura en Arquitectura, Mención Honorífica</em> · abr 2018</p>
+      </article>
+
+      <article>
+        <h3>Universidade de São Paulo (USP) — São Paulo, Brasil</h3>
+        <p><em>Arquitectura y Urbanismo (Intercambio)</em> · ago 2015–jun 2016</p>
+      </article>
+
+      <article>
+        <h3>Architectural Association (Summer Workshop) — Londres, Reino Unido</h3>
+        <p><em>Paisaje y Urbanismo</em> · jul 2017</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Premios y becas</h2>
+      <ul>
+        <li>Consejo Nacional de Humanidades, Ciencias y Tecnologías (México), Beca (2024).</li>
+        <li>
+          <a href="https://www.veredictas.com/en/trabajo/18725/atlas_de_lo_invisible/113" target="_blank" rel="noopener noreferrer">
+            Premio Emporia México (Oro) por la instalación “Atlas de lo Invisible: Inundación Inminente” (2024).
+          </a>
+        </li>
+        <li>
+          <a href="https://www.archdaily.cl/cl/1008934/8-instalaciones-efimeras-en-patios-historicos-de-la-ciudad-de-puebla-reflexionan-en-torno-al-agua" target="_blank" rel="noopener noreferrer">
+            Ganadora del concurso “Patio Efímero” con la instalación “Atlas de lo Invisible: Inundación Inminente”, con jurado del Sistema de Creadores de la Secretaría de Cultura (2023).
+          </a>
+        </li>
+        <li>Mención Cum Laude por tesis de licenciatura en la UNAM (2019).</li>
+        <li>Programa de Alto Rendimiento Académico de la UNAM — Beca (2013–2017).</li>
+        <li>Beca de Summer School de la AA (2017).</li>
+        <li>Beca de Movilidad Estudiantil; premio por mérito entre ~800 concursantes (2016).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Congresos, formación y difusión</h2>
+      <ul>
+        <!-- 2025 -->
+        <li>
+          <a href="https://urbanform.org/" target="_blank" rel="noopener noreferrer">
+            Ponencia en el International Seminar on Urban Form “Age of Artificial Intelligence” (2025).
+          </a>
+        </li>
+
+        <!-- 2024 -->
+        <li>
+          <a href="https://www.instagram.com/p/C2xZF2ZuIE-/" target="_blank" rel="noopener noreferrer">
+            Gobernanza del riesgo y resiliencia tras el huracán Otis (2024).
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=gbG9awjzfLU" target="_blank" rel="noopener noreferrer">
+            Planeación urbana en la región Sur-Sureste de México (2024).
+          </a>
+        </li>
+
+        <!-- 2023 -->
+        <li>
+          <a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/grupo-de-trabajo-sobre-desastres-politicas-publicas-e-instituciones" target="_blank" rel="noopener noreferrer">
+            Diseño de política nacional para la reconstrucción post-sísmica en México (2023).
+          </a>
+        </li>
+        <li>
+          <a href="https://www.gob.mx/inafed/archivo/videos?order=DESC&page=28" target="_blank" rel="noopener noreferrer">
+            Capacitación nacional en gestión del riesgo y resiliencia urbana (2023, 200+ personas funcionarias).
+          </a>
+        </li>
+
+        <!-- 2022 -->
+        <li>
+          <a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/coloquio-ordenamiento-territorial-como-instrumento-de-gestion-integral-de-riesgos-socioambientales" target="_blank" rel="noopener noreferrer">
+            Ordenamiento Territorial como instrumento de la Gestión Integral del Riesgo (2022).
+          </a>
+        </li>
+
+        <!-- 2021 -->
+        <li>
+          <a href="https://www.youtube.com/watch?v=B4GA1iMNraE" target="_blank" rel="noopener noreferrer">
+            Diálogos sobre resiliencia y juventud – UN75 (2021).
+          </a>
+        </li>
+
+        <!-- 2020 -->
+        <li>
+          Comunicación de riesgo para el desarrollo sostenible (PNUD, 2020).
+        </li>
+        <li>
+          <a href="https://sursa.sdi.unam.mx/index.php/actividades/boletines/el-estado-de-reconstruccion-post-sismica-en-el-sur-de-mexico" target="_blank" rel="noopener noreferrer">
+            El estado de la reconstrucción post-sísmica en el sur de México (2020).
+          </a>
+        </li>
+
+        <!-- Roles transversales -->
+        <li>
+          Representante técnica de SEDATU en grupos interinstitucionales de cambio climático y gestión del riesgo (2019–2024).
+        </li>
+        <li>
+          Ponencias internacionales (Japón, Kenia, Nicaragua, El Salvador) sobre política de reconstrucción y gestión del riesgo (2019–2024).
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Sticky contact bar -->
+  <footer class="contact-bar" role="contentinfo">
+    <div class="contact-inner">
+      <div class="contact-title">Contacto<span class="hidden-mobile">:</span></div>
+      <div class="contact-actions">
+        <a class="btn" href="resendizdaniela.13@gmail.com">Email</a>
+        <a class="btn" href="https://x.com/Danielaresendiz" target="_blank" rel="noreferrer">Twitter</a>
+        <a class="btn" href="https://mx.linkedin.com/in/daniela-res%C3%A9ndiz-1a815010a" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script src="../main.js"></script>
+</body>
+</html>

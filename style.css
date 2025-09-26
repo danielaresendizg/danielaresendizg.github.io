@@ -1,0 +1,205 @@
+/* ---------- Base / Reset ---------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.8;
+}
+
+/* ---------- Vars ---------- */
+:root { --page-w: 1200px; --gutter: 24px; }
+
+/* ---------- Layout ---------- */
+.wrapper {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* header, main, footer */
+}
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+  position: sticky; top: 0;
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 10;
+}
+.navbar {
+  max-width: var(--page-w); margin: 0 auto;
+  padding: 18px var(--gutter);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand { font-weight: 700; letter-spacing: .2px; font-size: 1.5rem; }
+.menu { display: flex; gap: 28px; }
+.menu a { text-decoration: none; color: #111; }
+.menu a:hover { text-decoration: underline; }
+
+/* ---------- Main / Grid ---------- */
+.main {
+  max-width: var(--page-w); margin: 0 auto;
+  padding: 40px var(--gutter) 120px; /* espacio para el footer fijo */
+}
+.grid {
+  display: grid; gap: 40px;
+  grid-template-columns: 1.2fr 1fr; /* texto / foto */
+  align-items: start;
+}
+@media (max-width: 960px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Bio text ---------- */
+.bio p { font-size: 0.9rem; margin: 0 0 18px; }
+.bio p strong { font-weight: 650; }
+.bio a { color: #111; text-decoration: underline; }
+
+/* ---------- Photo ---------- */
+.photo {
+  width: 100%; max-width: 420px;
+  border-radius: 2px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px #eee;
+}
+.photo-caption { font-size: .8rem; color: #777; margin-top: 8px; }
+
+/* ---------- Research interests / Chips ---------- */
+.section-label {
+  margin-top: 28px; font-size: .75rem;
+  color: #777; letter-spacing: .04em; text-transform: uppercase;
+}
+.chips { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  padding: 6px 10px; font-size: .56rem; border-radius: 2px;
+  background: #0000FF; color: #FFF; border: 1px solid #00fff9; white-space: nowrap;
+}
+
+/* ---------- Sticky Contact Bar ---------- */
+.contact-bar {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: #111; color: #fff; border-top: 1px solid #000;
+}
+.contact-inner {
+  max-width: var(--page-w); margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 16px; align-items: center; padding: 14px var(--gutter);
+}
+.contact-title { font-weight: 700; }
+.contact-actions { display: grid; grid-auto-flow: column; gap: 8px; }
+.btn {
+  display: inline-block; padding: 12px 18px; background: #eee; color: #111;
+  text-decoration: none; border-radius: 2px; border: 1px solid #ddd;
+}
+.btn:hover { background: #f5f5f5; }
+
+/* ---------- Utility ---------- */
+.muted { color: #666; }
+.hidden-mobile { display: inline; }
+@media (max-width: 520px) { .hidden-mobile { display: none; } }
+
+/* ===== Estilos específicos del CV ===== */
+.cv{
+  --cv-h1: 2.2rem;     /* por si añades un <h1> en el CV */
+  --cv-h2: 1.8rem;     /* “Key Competencies”, “Experience”, etc. */
+  --cv-h3: 1.1rem;     /* instituciones/puestos */
+  --cv-text: 1rem;     /* párrafos y listas */
+  --cv-tight: 1.65;    /* interlineado */
+  --cv-gap: 28px;      /* separación entre artículos */
+}
+
+/* Encabezados */
+.cv h1{ font-size: var(--cv-h1); margin: 0 0 18px; }
+.cv h2{
+  font-size: var(--cv-h2);
+  margin: 40px 0 14px;
+  line-height: 1.2;
+}
+.cv h3{
+  font-size: var(--cv-h3);
+  margin: 10px 0 6px;
+  font-weight: 650;
+}
+
+/* Texto y listas */
+.cv p,
+.cv li{
+  font-size: var(--cv-text);
+  line-height: var(--cv-tight);
+}
+.cv ul{
+  margin: 8px 0 0 18px;  /* sangría de bullets */
+  padding: 0;
+}
+.cv li{ margin: 5px 0; }
+
+/* Bloques / artículos */
+.cv section{ margin-bottom: 12px; }
+.cv article{ margin: 0 0 var(--cv-gap); }
+
+/* Destacar cargo/fechas dentro del artículo */
+.cv em{ font-style: italic; color: #333; }
+
+/* Variante compacta para listas muy largas (opcional) */
+/*
+.cv li{ margin: 4px 0; font-size: .98rem; }
+*/
+
+/* Responsive: reduce un poco tamaños en móvil */
+@media (max-width: 560px){
+  .cv{ --cv-h2: 1.5rem; --cv-h3: 1.05rem; --cv-text: .98rem; }
+}
+
+section a {
+  color: inherit;        /* Igual que el texto */
+  text-decoration: none; /* Quita subrayado */
+}
+
+section a:hover,
+section a:visited,
+section a:active {
+  color: inherit;        /* Siempre mismo color */
+  text-decoration: none; /* Nunca subrayado */
+}
+
+/* ========== PUBLICACIONES (4 columnas) ========== */
+.pubs { margin-top: 40px; }
+
+/* Encabezado y filas: SIEMPRE 4 columnas */
+.pubs .pub-head,
+.pubs .pub-row{
+  display: grid;
+  grid-template-columns: 64px 1.6fr 1fr 1fr; /* Año | Título | Rol | Nota breve */
+  gap: 28px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Encabezado */
+.pubs .pub-head{
+  color:#888; font-size:.6rem; text-transform:uppercase; letter-spacing:.05em; font-weight:300;
+  padding-top: 6px; padding-bottom: 6px;
+}
+
+/* Tipos de texto */
+.pubs .pub-year{ color:#666; font-weight:300; font-size:.7rem; }
+.pubs .pub-title{ font-size:.7rem; line-height:1.7; }
+.pubs .pub-role, .pubs .pub-note{ font-size:.7rem; line-height:1.7; color:#333; }
+
+/* Título/enlace */
+.pubs .pub-link{
+  color:inherit; text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px;
+}
+
+/* Responsive */
+@media (max-width: 960px){
+  .pubs .pub-head, .pubs .pub-row{ grid-template-columns: 64px 1fr; }
+  .pubs .pub-head .role, .pubs .pub-head .note{ display:none; }
+  .pubs .pub-row .pub-role, .pubs .pub-row .pub-note{ grid-column: 2; }
+}
+@media (max-width: 560px){
+  .pubs .pub-head{ display:none; }
+  .pubs .pub-row{ grid-template-columns: 1fr; gap:10px; padding: 18px 0; }
+  .pubs .pub-year{ order:-1; color:#999; }
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV – Daniela Reséndiz</title>
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- ===== Estilos específicos del CV ===== -->
+  <style>
+    /* Variables para escalar rápido todo el CV */
+    .cv{
+      --cv-h1: 2rem;      /* por si usas <h1> en el CV */
+      --cv-h2: 1.2rem;    /* títulos de sección */
+      --cv-h3: 0.8rem;    /* institución / cargo */
+      --cv-text: 0.8rem;  /* párrafos y bullets */
+      --cv-tight: 1.65;   /* interlineado */
+      --cv-gap: 28px;     /* espacio entre artículos */
+    }
+
+    /* Encabezados */
+    .cv h1{ font-size: var(--cv-h1); margin: 0 0 18px; line-height: 1.2; }
+    .cv h2{
+      font-size: var(--cv-h2);
+      margin: 40px 0 14px;
+      line-height: 1.2;
+    }
+    .cv h3{
+      font-size: var(--cv-h3);
+      margin: 10px 0 6px;
+      font-weight: 650;
+      line-height: 1.35;
+    }
+
+    /* Texto y listas */
+    .cv p,
+    .cv li{
+      font-size: var(--cv-text);
+      line-height: var(--cv-tight);
+      margin: 0 0 0.5em;
+    }
+    .cv ul{ margin: 8px 0 0 18px; padding: 0; }
+    .cv li{ margin: 6px 0; }
+
+    /* Bloques / artículos */
+    .cv section{ margin-bottom: 12px; }
+    .cv article{ margin: 0 0 var(--cv-gap); }
+
+    /* Énfasis */
+    .cv em{ font-style: italic; color: #333; }
+
+    /* Responsive: un toque más compacto en móvil */
+    @media (max-width: 560px){
+      .cv{ --cv-h2: 1.5rem; --cv-h3: 1.05rem; --cv-text: .98rem; --cv-gap: 22px; }
+    }
+  </style>
+  <!-- ===== /Estilos específicos del CV ===== -->
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="navbar">
+      <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;">Daniela Reséndiz</a></div>
+      <nav class="menu" aria-label="Principal">
+      <a href="index.html">Bio</a>
+      <a href="cv.html" aria-current="page">CV</a>
+      <a href="publication.html">Publicaciones</a>
+      <a href="projects.html">Proyectos</a>
+      <a href="blog.html">Blog</a>
+      <!-- Cambiar a EN -->
+      <a href="../en/cv.html" lang="en" hreflang="en" rel="alternate">EN</a>
+    </nav>
+  </div>
+</header>
+
+ <main class="main">
+<section id="publications" class="pubs">
+  <h2>Publications</h2>
+
+  <!-- Encabezado de columnas -->
+  <div class="pub-head">
+    <div class="col año">Año</div>
+    <div class="col titulo">Título</div>
+    <div class="col rol">Rol</div>
+    <div class="col nota">Nota </div>
+  </div>
+  
+  <div class="pub-list">
+
+    <!-- 2025 -->
+    <article class="pub-row">
+      <div class="pub-year">2025</div>
+      <div class="pub-title">
+        <a class="pub-link" href="https://www.isuf2025.org/wp-content/uploads/2025/07/book_of_abstract_15-07-2025.pdf" target="_blank" rel="noopener">
+          ISUF TORINO 2025 | Morfología urbana en la era de la Inteligencia Artificial (Libro de resúmenes) – Tipologías de vivienda colectiva en el espacio urbano contemporáneo: Comprendiendo la adaptación habitacional en el centro histórico de Ciudad de México
+        </a>
+      </div>
+      <div class="pub-role">Invitada a presentación de investigación</div>
+      <div class="pub-note">Resumen de conferencia sobre tipologías de vivienda y adaptación en el centro histórico de Ciudad de México.</div>
+    </article>
+
+    <!-- 2024 -->
+    <article class="pub-row">
+      <div class="pub-year">2024</div>
+      <div class="pub-title">
+        <a class="pub-link" href="https://www.gob.mx/cms/uploads/attachment/file/982111/NOM-006-SEDATU-2024.pdf" target="_blank" rel="noopener">
+          NOM-006-SEDATU-2024, SEDATU
+        </a>
+      </div>
+      <div class="pub-role">Coordinación del grupo de trabajo, Consulta Pública, Análisis de Impacto Regulatorio y Publicación en el DOF. Presentación ante el titular de la secretaría y Comité Consultivo Nacional de Normalización de Ordenamiento Territorial y Desarrollo Urbano</div>
+      <div class="pub-note">Norma que establece cómo clasificar y delimitar áreas no aptas para asentamientos humanos por riesgos críticos o valor ambiental/cultural.</div>
+    </article>
+
+    <article class="pub-row">
+      <div class="pub-year">2024</div>
+      <div class="pub-title">
+        <a class="pub-link" href="https://ciudadesytransporte.mx/wp-content/uploads/2024/12/memoria_impactos_y_resultados_proyecto_biocitis_2020_2024.pdf" target="_blank" rel="noopener">
+          Informe final del programa BIOCITIS, GIZ
+        </a>
+      </div>
+      <div class="pub-role">Colaboración en el programa BIOCITIS y evaluación de propuestas ganadoras</div>
+      <div class="pub-note">Síntesis de resultados del programa 2020–2024 sobre resiliencia costera y sostenibilidad urbana en México.</div>
+    </article>
+
+    <article class="pub-row">
+      <div class="pub-year">2024</div>
+      <div class="pub-title">
+        <a class="pub-link" href="https://www.gob.mx/sedatu/documentos/guia-de-indicadores-para-fortalecer-el-situ-en-materia-de-genero-gestion-integral-de-riesgos-de-desastres-y-resiliencia-climatica" target="_blank" rel="noopener">
+          Guía de indicadores para fortalecer el SITU, SEDATU
+        </a>
+      </div>
+      <div class="pub-role">Responsable de desarrollo y validación técnica</div>
+      <div class="pub-note">Guía para estandarizar indicadores del Sistema de Información Territorial y Urbana (SITU).</div>
+    </article>
+
+    <!-- 2023 -->
+    <article class="pub-row">
+      <div class="pub-year">2023</div>
+      <div class="pub-title">
+        <a class="pub-link" href="https://www.gob.mx/cms/uploads/attachment/file/864012/Trazando_territorios_ruta_para_la_planeaci_n_y_ordenamiento_territorial_sostenible.pdf" target="_blank" rel="noopener">
+          Trazando Territorios, SEDATU
+        </a>
+      </div>
+      <div class="pub-role">Responsable de validación técnica</div>
+      <div class="pub-note">Hoja de ruta para la planeación territorial sostenible y el ordenamiento del suelo.</div>
+    </article>
+    
+    <article class="pub-row">
+      <div class="pub-year">2023</div>
+      <div class="pub-title">
+        <a class="pub-link" href="https://dof.gob.mx/nota_detalle.php?codigo=5719284&fecha=06/03/2024#gsc.tab=0" target="_blank" rel="noopener">
+          NOM-003-SEDATU-2023, SEDATU
+        </a>
+      </div>
+      <div class="pub-role">Miembro técnico en la elaboración de la norma</div>
+      <div class="pub-note">Establece lineamientos para fortalecer sistemas territoriales frente a riesgos y desastres mediante el ordenamiento del suelo.</div>
+    </article>
+
+    <!-- 2022 -->
+    <article class="pub-row">
+      <div class="pub-year">2022</div>
+      <div class="pub-title">
+        <a class="pub-link" href="https://siesco.conavi.gob.mx/doc/tecnicos/recomendaciones/RECOMENDACIONES%20DE%20OBRA%20NUEVA.pdf" target="_blank" rel="noopener">
+          Recomendaciones estructurales y constructivas para vivienda nueva, CONAVI
+        </a>
+      </div>
+      <div class="pub-role">Revisión técnica y entrega de insumos técnicos</div>
+      <div class="pub-note">Criterios prácticos estructurales y constructivos para vivienda nueva, como complemento a normas locales.</div>
+    </article>
+
+    <article class="pub-row">
+      <div class="pub-year">2022</div>
+      <div class="pub-title">
+        <a class="pub-link" href="https://siesco.conavi.gob.mx/siesco/peligros_recomendaciones.aspx" target="_blank" rel="noopener">
+          Identificación de peligros y recomendaciones técnicas para cimentación, CONAVI
+        </a>
+      </div>
+      <div class="pub-role">Revisión técnica y entrega de insumos técnicos</div>
+      <div class="pub-note">Guía estatal que vincula peligros locales con recomendaciones de cimentación adecuadas.</div>
+    </article>
+
+    <!-- 2020 -->
+    <article class="pub-row">
+      <div class="pub-year">2020</div>
+      <div class="pub-title">
+        <a class="pub-link" href="https://www.gob.mx/sedatu/documentos/metropolis-de-mexico-2020?state=published" target="_blank" rel="noopener">
+          Metrópolis de México 2020, SEDATU
+        </a>
+      </div>
+      <div class="pub-role">Revisión técnica</div>
+      <div class="pub-note">Estudio interinstitucional para identificar, delimitar y caracterizar las zonas metropolitanas de México (CONAPO–INEGI–SEDATU).</div>
+    </article>
+
+  </div>
+</section>
+
+  <!-- Sticky contact bar -->
+  <footer class="contact-bar" role="contentinfo">
+    <div class="contact-inner">
+      <div class="contact-title">Contacto<span class="hidden-mobile">:</span></div>
+      <div class="contact-actions">
+        <a class="btn" href="mailto:tu-resendizdaniela.13@gmail.com">Email</a>
+        <a class="btn" href="https://x.com/Danielaresendiz" target="_blank" rel="noreferrer">Twitter</a>
+        <a class="btn" href="https://mx.linkedin.com/in/daniela-res%C3%A9ndiz-1a815010a" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script src="../main.js"></script>
+</body>
+</html>
