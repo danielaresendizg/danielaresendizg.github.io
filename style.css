@@ -326,5 +326,7 @@ section a:active {
 }
 .project-caption{
   margin-top:8px;
-  font-size:0.95rem;
+  font-size:.95rem;
+  text-align:center;
+  font-style: oblique;
 }
