@@ -1,146 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Publication– Daniela Reséndiz</title>
- <link rel="stylesheet" href="../style.css" />
+  <title>Projects – Daniela Reséndiz</title>
+  <link rel="stylesheet" href="../style.css" />
 
+  <style>
+    .project-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:22px;
+    }
+    @media (max-width:980px){.project-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.project-grid{grid-template-columns:1fr}}
+
+    .project-card{display:block;text-decoration:none;color:inherit}
+    .project-thumb{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:12px}
+    .project-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+    .project-thumb::after{content:"";position:absolute;inset:0;border-radius:inherit;background:rgba(0,0,0,0);transition:background .25s ease}
+    .project-card:hover .project-thumb img{transform:scale(1.03)}
+    .project-card:hover .project-thumb::after{background:rgba(0,0,0,.15)}
+    .project-caption{margin-top:8px;font-size:.95rem;text-align:center}
+  </style>
+</head>
+<body>
   <!-- Header -->
-<header class="site-header">
-  <div class="navbar">
-    <div class="brand">
-      <a href="index.html" style="text-decoration:none;color:inherit;">Daniela Reséndiz</a>
+  <header class="site-header">
+    <div class="navbar">
+      <div class="brand">
+        <a href="index.html" style="text-decoration:none;color:inherit;">Daniela Reséndiz</a>
+      </div>
+      <nav class="menu" aria-label="Primary">
+        <a href="index.html">Bio</a>
+        <a href="cv.html">CV</a>
+        <a href="publication.html">Publications</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="../es/proyectos.html" lang="es">ES</a>
+      </nav>
     </div>
-    <nav class="menu" aria-label="Main">
-      <a href="index.html">Bio</a>
-      <a href="cv.html">CV</a>
-      <a href="publication.html" aria-current="page">Publications</a>
-      <a href="projects.html">Projects</a>
-      <a href="blog.html">Blog</a>
-      <!-- Switch to ES -->
-      <a href="../es/publication.html" lang="es" hreflang="es" rel="alternate">ES</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
- <main class="main">
-<section id="publications" class="pubs">
-  <h2>Publications</h2>
+  <main class="wrapper">
+    <h1>Projects</h1>
 
-  <!-- Column headings -->
-  <div class="pub-head">
-    <div class="col year">Year</div>
-    <div class="col title">Title</div>
-    <div class="col role">Role</div>
-    <div class="col note">Brief note</div>
-  </div>
-  
-  <div class="pub-list">
-
-    <!-- 2025 -->
-    <article class="pub-row">
-      <div class="pub-year">2025</div>
-      <div class="pub-title">
-        <a class="pub-link" href="https://www.isuf2025.org/wp-content/uploads/2025/07/book_of_abstract_15-07-2025.pdf" target="_blank" rel="noopener">
-          ISUF TORINO 2025 | Urban Morphology in the Age of Artificial Intelligence (Book of Abstracts) – Collective housing typologies in contemporary urban space: Understanding housing adaptation in Mexico City’s historic centre
-        </a>
-      </div>
-      <div class="pub-role">Invited research presentation</div>
-      <div class="pub-note">Conference abstract on housing typologies and adaptation in Mexico City’s historic centre.</div>
-    </article>
-
-    <!-- 2024 -->
-    <article class="pub-row">
-      <div class="pub-year">2024</div>
-      <div class="pub-title">
-        <a class="pub-link" href="https://www.gob.mx/cms/uploads/attachment/file/982111/NOM-006-SEDATU-2024.pdf" target="_blank" rel="noopener">
-          NOM-006-SEDATU-2024, SEDATU
-        </a>
-      </div>
-      <div class="pub-role">Coordination of the working group, Public Consultation, Regulatory Impact Analysis and publication in the Official Gazette. Presentation to the Minister and the National Consultative Committee on Land-use Planning and Urban Development</div>
-      <div class="pub-note">Defines how to classify and delimit areas not suitable for human settlements due to critical risks or environmental/cultural value.</div>
-    </article>
-
-    <article class="pub-row">
-      <div class="pub-year">2024</div>
-      <div class="pub-title">
-        <a class="pub-link" href="https://ciudadesytransporte.mx/wp-content/uploads/2024/12/memoria_impactos_y_resultados_proyecto_biocitis_2020_2024.pdf" target="_blank" rel="noopener">
-          Final Report of the BIOCITIS Programme, GIZ
-        </a>
-      </div>
-      <div class="pub-role">Collaboration in the BIOCITIS programme and evaluation of winning proposals</div>
-      <div class="pub-note">Summarises outcomes of the 2020–2024 coastal resilience and urban sustainability programme in Mexico.</div>
-    </article>
-
-    <article class="pub-row">
-      <div class="pub-year">2024</div>
-      <div class="pub-title">
-        <a class="pub-link" href="https://www.gob.mx/sedatu/documentos/guia-de-indicadores-para-fortalecer-el-situ-en-materia-de-genero-gestion-integral-de-riesgos-de-desastres-y-resiliencia-climatica" target="_blank" rel="noopener">
-          Indicator Guide to Strengthen the SITU, SEDATU
-        </a>
-      </div>
-      <div class="pub-role">Responsible for development and technical validation</div>
-      <div class="pub-note">Guide to standardise indicators for SEDATU’s Territorial and Urban Information System (SITU).</div>
-    </article>
-
-    <!-- 2023 -->
-    <article class="pub-row">
-      <div class="pub-year">2023</div>
-      <div class="pub-title">
-        <a class="pub-link" href="https://www.gob.mx/cms/uploads/attachment/file/864012/Trazando_territorios_ruta_para_la_planeaci_n_y_ordenamiento_territorial_sostenible.pdf" target="_blank" rel="noopener">
-          Mapping Territories, SEDATU
-        </a>
-      </div>
-      <div class="pub-role">Responsible for technical validation</div>
-      <div class="pub-note">Roadmap for sustainable territorial planning and land-use management.</div>
-    </article>
-    
-    <article class="pub-row">
-      <div class="pub-year">2023</div>
-      <div class="pub-title">
-        <a class="pub-link" href="https://dof.gob.mx/nota_detalle.php?codigo=5719284&fecha=06/03/2024#gsc.tab=0" target="_blank" rel="noopener">
-          NOM-003-SEDATU-2023, SEDATU
-        </a>
-      </div>
-      <div class="pub-role">Technical member in the drafting of the standard</div>
-      <div class="pub-note">Sets guidelines to strengthen territorial systems to resist, adapt and recover from natural and climate-related hazards through land-use planning.</div>
-    </article>
-
-    <!-- 2022 -->
-    <article class="pub-row">
-      <div class="pub-year">2022</div>
-      <div class="pub-title">
-        <a class="pub-link" href="https://siesco.conavi.gob.mx/doc/tecnicos/recomendaciones/RECOMENDACIONES%20DE%20OBRA%20NUEVA.pdf" target="_blank" rel="noopener">
-          Structural and Construction Recommendations for New Housing, CONAVI
-        </a>
-      </div>
-      <div class="pub-role">Technical review and delivery of technical inputs</div>
-      <div class="pub-note">Practical structural and construction criteria for new housing, complementing local building regulations.</div>
-    </article>
-
-    <article class="pub-row">
-      <div class="pub-year">2022</div>
-      <div class="pub-title">
-        <a class="pub-link" href="https://siesco.conavi.gob.mx/siesco/peligros_recomendaciones.aspx" target="_blank" rel="noopener">
-          Hazard Identification and Technical Recommendations for Foundations, CONAVI
-        </a>
-      </div>
-      <div class="pub-role">Technical review and delivery of technical inputs</div>
-      <div class="pub-note">State-by-state guidance linking local hazards with suitable foundation recommendations.</div>
-    </article>
-
-    <!-- 2020 -->
-    <article class="pub-row">
-      <div class="pub-year">2020</div>
-      <div class="pub-title">
-        <a class="pub-link" href="https://www.gob.mx/sedatu/documentos/metropolis-de-mexico-2020?state=published" target="_blank" rel="noopener">
-          Metropolises of Mexico 2020, SEDATU
-        </a>
-      </div>
-      <div class="pub-role">Technical review</div>
-      <div class="pub-note">Interinstitutional study to identify, delimit and characterise Mexico’s metropolitan areas (CONAPO–INEGI–SEDATU).</div>
-    </article>
-
-  </div>
-</section>
+    <section class="project-grid">
+      <!-- Tarjeta 1 -->
+      <a class="project-card" href="https://danielaresendizg.github.io/chennai_research/" target="_blank">
+        <figure class="project-thumb">
+          <img src="../assets/chennai.png" alt="Chennai Research">
+        </figure>
+        <div class="project-caption">Chennai, India</div>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
