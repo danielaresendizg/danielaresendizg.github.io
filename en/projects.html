@@ -8,51 +8,20 @@
 
   <style>
     .project-grid{
-      display:flex;
-      justify-content:center; /* centra las tarjetas */
-      gap:32px;
-      flex-wrap:wrap;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:22px;
     }
+    @media (max-width:980px){.project-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.project-grid{grid-template-columns:1fr}}
 
-    .project-card{
-      display:flex;
-      flex-direction:column;
-      align-items:center; /* centra imagen y caption */
-      text-decoration:none;
-      color:inherit;
-      width:400px; /* 👈 tamaño fijo (ajústalo según quieras) */
-    }
-
-    .project-thumb{
-      position:relative;
-      width:100%;
-      aspect-ratio:4/3;
-      overflow:hidden;
-      border-radius:12px;
-    }
-    .project-thumb img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      transition:transform .35s ease;
-    }
-    .project-thumb::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      border-radius:inherit;
-      background:rgba(0,0,0,0);
-      transition:background .25s ease;
-    }
-    .project-card:hover .project-thumb img{ transform:scale(1.03) }
-    .project-card:hover .project-thumb::after{ background:rgba(0,0,0,.15) }
-
-    .project-caption{
-      margin-top:8px;
-      font-size:1rem;
-      font-style:oblique;
-      text-align:center;
-    }
+    .project-card{display:block;text-decoration:none;color:inherit}
+    .project-thumb{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:12px}
+    .project-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+    .project-thumb::after{content:"";position:absolute;inset:0;border-radius:inherit;background:rgba(0,0,0,0);transition:background .25s ease}
+    .project-card:hover .project-thumb img{transform:scale(1.03)}
+    .project-card:hover .project-thumb::after{background:rgba(0,0,0,.15)}
+    .project-caption{margin-top:8px;font-size:.95rem;text-align:center}
   </style>
 </head>
 <body>
@@ -77,9 +46,10 @@
     <h1>Projects</h1>
 
     <section class="project-grid">
+      <!-- Tarjeta 1 -->
       <a class="project-card" href="https://danielaresendizg.github.io/chennai_research/" target="_blank">
         <figure class="project-thumb">
-          <img src="/chennai_project2.png" alt="Chennai Research">
+          <img src="../assets/chennai.png" alt="Chennai Research">
         </figure>
         <div class="project-caption">Chennai, India</div>
       </a>
