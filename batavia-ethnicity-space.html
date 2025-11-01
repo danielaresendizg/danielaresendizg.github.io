@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Reading Identity Through Space: Ethnicity and Urban Control from Batavia to the Present</title>
+  <style>
+    :root{
+      --bg: #0f1f14;        /* olive-darker */
+      --fg: #f5f3e7;        /* warm cream */
+      --muted: #cbd5b1;     /* sage */
+      --accent: #ff8f3a;    /* orange */
+      --accent-2: #ffa94d;  /* lighter orange */
+      --rule: #2b3b2b;      /* divider */
+      --maxw: 780px;
+    }
+
+    /* Base */
+    html,body{height:100%}
+    body{
+      margin:0; padding:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family: "Helvetica", Arial, sans-serif;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    .wrap{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:40px 20px 56px;
+    }
+
+    /* Head */
+    .kicker{
+      text-transform:uppercase;
+      font-size:.85rem;
+      font-weight:600;
+      letter-spacing:.05em;
+      color:var(--muted);
+      text-align:center;
+      margin:0 0 .85rem;
+    }
+    header.hero h1{
+      font-size: clamp(1.9rem, 3.6vw, 2.4rem);
+      line-height:1.2;
+      font-weight:800;
+      text-align:center;
+      margin:0 0 1rem;
+    }
+    .byline{
+      font-size:1rem;
+      color:var(--accent);
+      text-align:center;
+      margin:.25rem 0 1.25rem;
+      font-weight:600;
+    }
+    .meta{
+      font-size:.95rem; 
+      color:var(--muted);
+      text-align:center;
+      margin:-.5rem 0 1.75rem;
+      font-weight:500;
+    }
+
+    /* Hero image (FULL, no crop) */
+    .cover{
+      border-radius:14px;
+      overflow:hidden;
+      background:#203120;
+      margin: 0 0 .75rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .cover img{
+      width:100%;
+      height:auto;            /* << keep aspect ratio */
+      display:block;
+      object-fit:contain;     /* just in case */
+    }
+    .cover figcaption{
+      font-size:.85rem;
+      line-height:1.4;
+      color: var(--muted);
+      text-align:center;
+      padding: .6rem .75rem .8rem;
+      background: #182618;
+    }
+    .cover figcaption a{
+      color: var(--accent-2);
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(255,169,77,.35);
+    }
+    .cover figcaption a:hover{
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* Body */
+    .content p{
+      font-size:1.02rem;
+      margin:1.1rem 0;
+      text-align:justify;
+      font-weight:300;
+    }
+    .content strong{font-weight:700}
+    .content a{ color: var(--accent-2); text-decoration: none; border-bottom: 1px solid rgba(255,169,77,.35); }
+    .content a:hover{ color: var(--accent); border-bottom-color: var(--accent); }
+
+    blockquote{
+      margin:1.2rem 0;
+      padding:.85rem 1rem;
+      border-left:4px solid var(--accent);
+      background:rgba(255,143,58,.06);
+      border-radius:8px;
+      font-style:italic;
+    }
+
+    /* References */
+    .refs{ margin-top:28px; border-top:1px solid var(--rule); padding-top:14px; }
+    .refs h2{ font-size:1rem; color:var(--muted); margin:0 0 .5rem; letter-spacing:.02em; }
+    .refs li{ margin:.45rem 0; font-size:.92rem; color:#eee; }
+
+    /* Optional back link */
+    .back{
+      display:inline-block;
+      margin:0 0 8px;
+      color:var(--muted);
+      text-decoration:none;
+      border-bottom:1px solid transparent;
+      font-size:.95rem;
+    }
+    .back:hover{ color:var(--fg); border-bottom-color: var(--fg); }
+
+    /* Small screens improve legibility */
+    @media (max-width:420px){
+      .content p{ font-size:1.04rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- Si quieres un botón de regreso, descomenta: -->
+    <!-- <a class="back" href="/en/blog/">← Back to Blog</a> -->
+
+    <header class="hero">
+      <div class="kicker">Ethnicity • Spatial configuration • Colonial urbanism</div>
+      <h1>Reading Identity Through Space: Ethnicity and Urban Control from Batavia to the Present</h1>
+      <div class="byline">By Daniela Reséndiz</div>
+
+      <figure class="cover">
+        <img src="/Blog_01_Batavia.jpg"
+             alt="Map of the Castle and the City of Batavia, on the island of Java (now Jakarta, Indonesia).">
+        <figcaption>
+          <em>Map of the Castle and the City of Batavia</em> (1681). Etching by
+          <a href="https://en.wikipedia.org/wiki/Jan_Janssonius" target="_blank" rel="noopener">Jan Janssonius</a>;
+          original by <a href="https://en.wikipedia.org/wiki/Clement_de_Jonghe" target="_blank" rel="noopener">Clement de Jonghe</a>.
+          Source: <a href="https://commons.wikimedia.org/wiki/File:Batavia_1681.jpg" target="_blank" rel="noopener">TU&nbsp;Delft · Wikimedia Commons</a>.
+        </figcaption>
+      </figure>
+    </header>
+
+    <article class="content">
+      <blockquote>
+        “a woman might be read as being European in church, a Native in the <em>kampung</em>, and a <em>mestiza</em> in the market...A woman may still be seen as successful when she accesses a corporate tower in a gentrified financial district, precarious when she navigates daily life in an informal settlement, and as a faceless migrant cleaning office building after hours, barely visible to the broader public”
+      </blockquote>
+
+      <p>In his article <em>Batavian Apartheid</em> (2021), Cowherd explores how the Dutch colonial project in Batavia (Jakarta) established, through the delegated implementation of spatial control by intermediary groups such as the Chinese officers, a deeply entrenched system of ethnic segregation through spatial configuration. Rather than treating ethnicity as a static or inherent trait, Cowherd reveals it to be a flexible construct—produced, regulated, and interpreted through the built environment. The spatial organisation of Batavia—its maps, legal systems, physical divisions, and symbolic codes—not only reflected social hierarchies but actively created and maintained them. As Cowherd memorably asserts, “a woman might be read as being European in church, a Native in the kampung, and a mestiza in the market (2021, pp. 37)". This essay argues that Batavia’s urban design did not simply facilitate Dutch control and economic exploitation but functioned as a diagram of domination. It translated the fluidity of racial and ethnic identity into fixed spatial categories. Ethnicity and space were co-produced in such a way that allowed colonial authority to both observe and categorise bodies—mechanisms whose legacies remain embedded in present-day urban inequalities.</p>
+
+      <p>Ethnicity in colonial Batavia was essential to the management of space and people. It was employed as a tool of control, designed to categorise and regulate the population through visible cues such as clothing, language, and behaviour—each associated with urban zones (Cowherd, 2021). Within this context, ethnicity served less as an expression of cultural identity and more as a regulatory mechanism. The colonial authorities assigned roles and spatial locations to racialised groups to facilitate surveillance, restrict mobility, and enable economic labour extraction. These identity categories—European, Chinese, and South/Southeast Asian mestizos—were embedded into the city's spatial design, reinforcing a visual and administrative hierarchy. This aligns with Eriksen’s definition of ethnicity "as relationships between groups whose members consider themselves distinctive, and these groups are often ranked hierarchically within a society (2010b, pp. 10)".</p>
+
+      <p>However, these boundaries were never entirely secure. Despite the Dutch desire for fixed categories and orderly divisions, the reality was significantly more complex. Individuals frequently crossed the boundaries that colonial cartography attempted to impose. Intermarriage, social interaction, and economic mobility generated lived experiences that defied simple classification, ethnic identity is dynamic and context-dependent (Eriksen, 2010a). The colonial system in Batavia was thus more aspirational than effective—a theatrical performance of control through space that struggled to contain the fluid realities of urban life.</p>
+
+      <p>Batavia was not a society naturally segregated, but one that was meticulously engineered to appear so. Spatial segregation operated through three interlinked mechanisms. Firstly, maps served not merely to record the city but to shape its ideological framework. They imposed an illusion of order and control, even where such control was largely absent. For instance, kampung areas—home to much of the indigenous population—were frequently omitted or stylised as gardens in official maps, thereby erasing their presence. Secondly, the urban form itself reinforced segregation: walls, bridges, canals, and gates physically separated populations and controlled their movement. These infrastructural features inscribed spatial divisions into the city's material fabric. Thirdly, legal codes—such as the Sumptuary Laws—mandated distinct forms of dress for different ethnic and social groups. These visual markers rendered identity legible and enforceable, foreshadowing the institutionalised spatial regulations seen later in South Africa’s Grand Apartheid Cowherd (2021). Collectively, these practices created a system of restriction, visibility, and exclusion that turned Batavia into a functional diagram of colonial dominance.</p>
+
+      <p>Cowherd’s analysis further reveals how ethnicity and spatial organisation intersected across several urban scales. On a macro-level, segregation was evident in the city’s overall structure: Europeans resided in the central quarters, Chinese communities occupied commercial corridors, and various Southeast Asian mestizo groups were pushed to the periphery. On a meso-level, the internal layouts of these enclaves shaped neighbourhood dynamics and reinforced internal hierarchies. On a micro-level, identity was regulated through everyday encounters—at gates, bridges, and markets—where clothing, speech, and behaviour were closely monitored and interpreted (Colombijn and Erdentug, 2003). These levels operated together to sustain a colonial structure in which law, representation, and infrastructure were all employed to regulate movement, belonging, and visibility (Cowherd, 2021). In this context, the map was not a neutral tool but a mechanism for establishing who could exist where and under what terms. Just as the body was marked by dress and language, the land was marked by cartographic distinctions that encoded power.</p>
+
+      <p>Batavia functioned as a diagram of domination: a city whose very layout embodied visibility, control, and separation (Cowherd, 2021). This spatial organisation had concrete effects across all scales. On a macro-level, it resulted in a city divided by ethnic status, excluding underprivileged groups from central zones of power and commerce. This negative segregation excludes them economically and politically (Peach, 1996). On a meso-level, life within peripheral communities was organised into zones of reproduction and neglect—what Lefebvre (1992) calls the production of space through power. Here, space did not simply mirror inequality; it produced it. On a micro-level, each group have their own dynamic, rules and forms to solve problematics, isolated between them. These spatial allocations did more than organise residence—they projected a racialised order embedded in urban space, like different cities in a bigger one (Cowherd, 2021). This embedded hierarchy not only structured daily life, but also conditioned how bodies were read, valued, or excluded depending on their location.</p>
+
+      <p>This multi-layered system of domination helps clarify Cowherd’s powerful observation: “a woman might be read as being European in church, a Native in the kampung, and a mestiza in the market.” Her identity did not change; it was the spatial logic of the city that recast her depending on context. At each level—district, neighbourhood, or street corner—urban space contributed to the reproduction of racial categories. In Batavia, identity was not inherent but constructed through and within space. The colonial city transformed not only how people moved but also how they were perceived, categorised, and controlled.</p>
+
+      <p>Although Batavia represents a specific historical case, its spatial logic persists in contemporary urban life. In a contemporary way, the colonial model of categorising and organising populations continues to shape many cities, particularly in the Global South (Baffoe and Roy, 2023). This misconception allows exclusion to be rationalised as a product of individual choice rather than systemic design. David Harvey (1973) similarly argues that those regarded as marginal are pushed to the least desirable urban zones due to structural economic forces—not personal decisions. In this way, spatial segregation is reproduced and normalised. Legal codes, infrastructure, and urban planning continue to determine access, visibility, and legitimacy. As Vaughan (2015) notes, marginal spaces can generate new forms of social life, but the necessity for such resilience signals an ongoing structural injustice.</p>
+
+      <p>This colonial framework remains deeply embedded in the urban planning practices of today. Master plans are often produced by foreign consultants, zoning laws favour commercial and elite interests, and urban land is divided by economic use rather than lived reality (Baffoe and Roy, 2023). Census classifications still serve to label individuals by race or ethnicity, influencing their spatial entitlements. Even access to transport or public space can depend on one’s residential location or perceived group identity. These dynamics are especially evident in city peripheries, where informal settlements—much like Batavia’s kampungs—are marginalised, often unacknowledged in official maps and excluded from public investment (Useche et al., 2024). Just as in Batavia, today’s urban spaces reproduce systems of control where movement, identity, and belonging are spatially regulated. A woman may still be seen as successful when she accesses a corporate tower in a gentrified financial district, precarious when she navigates daily life in an informal settlement, and as a faceless migrant cleaning office building after hours, barely visible to the broader public. These interpretations, while more subtle than in colonial times, remain shaped by historical patterns of spatial exclusion. They continue to determine who is visible, credible, or included in urban life and decisions.</p>
+
+      <p>In conclusion, the colonial experiment in Batavia shows how spatial structures can profoundly shape the perception and governance of identity. Cowherd’s depiction of a woman read differently across settings is not metaphorical; it is a literal account of how identity was produced through law, infrastructure, and architecture. Ethnicity in Batavia was not merely observed—it was actively constructed through spatial logic and administrative systems. This diagram of domination organised not only where people lived, but who could be seen, heard, and moved. These mechanisms of spatial control have not disappeared. They echo in the segregated geographies and unequal planning regimes that characterise many contemporary cities. Recognising the spatial nature of identity is essential if we are to dismantle inherited inequalities and imagine more just and inclusive urban futures. This invites us to consider not just how cities are built, but how they continue to build us (Phillips, 1996).</p>
+
+      <section class="refs">
+        <h2>References</h2>
+        <ul>
+          <li>Baffoe, G. and Roy, S. (2023) ‘Colonial legacies and contemporary urban planning practices in Dhaka, Bangladesh’, <em>Planning Perspectives</em>, 38(1), pp. 173–196. <a href="https://doi.org/10.1080/02665433.2022.2041468">https://doi.org/10.1080/02665433.2022.2041468</a>.</li>
+          <li>Colombijn, F. and Erdentug, A. (2003) ‘Introduction: urban space and ethnicity’, in <em>Urban Ethnic Encounters</em>. Routledge, pp. 17–40.</li>
+          <li>Cowherd, R. (2021) ‘Batavian Apartheid: Mapping Bodies, Constructing Identity’, <em>Southeast of Now</em>, 5(1), pp. 15–46.</li>
+          <li>Eriksen, T.H. (2010a) ‘Ethnic Classification: Us and Them’, in <em>Ethnicity and Nationalism: Anthropological Perspectives</em>. Pluto Press, pp. 23–43.</li>
+          <li>Eriksen, T.H. (2010b) ‘What is Ethnicity?’, in <em>Ethnicity and Nationalism: Anthropological Perspectives</em>. Pluto Press, pp. 1–22.</li>
+          <li>Harvey, D. (1973) <em>Social Justice and the City</em>. University of Georgia Press. <a href="http://www.jstor.org/stable/j.ctt46nm9v">JSTOR</a>.</li>
+          <li>Peach, C. (1996) ‘Good segregation, bad segregation’, <em>Planning Perspectives</em>, 11(4), pp. 379–398. <a href="https://doi.org/10.1080/026654396364817">https://doi.org/10.1080/026654396364817</a>.</li>
+          <li>Phillips, E. Barbara. (1996) <em>City lights: urban-suburban life in the global society</em>.</li>
+          <li>Swyngedouw, E. and Lefebvre, H. (1992) ‘The Production of Space’, <em>Economic Geography</em>, 68(3), p. 317. <a href="https://doi.org/10.2307/144191">https://doi.org/10.2307/144191</a>.</li>
+          <li>Useche, A.F. et al. (2024) ‘Spatial segregation patterns and association with built environment features in Colombian cities’, <em>Cities</em>, 152, 105217. <a href="https://doi.org/10.1016/J.CITIES.2024.105217">https://doi.org/10.1016/J.CITIES.2024.105217</a>.</li>
+          <li>Vaughan, L. (2015) ‘The Paradox of City Walls: Enclosure, Boundary, Barrier’, <em>Lobby Magazine</em>, (3), pp. 100–103.</li>
+        </ul>
+      </section>
+    </article>
+  </div>
+</body>
+</html>
