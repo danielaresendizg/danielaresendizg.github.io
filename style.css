@@ -206,13 +206,17 @@ section a:active {
 
 /* Responsive */
 @media (max-width: 960px){
-  .pubs .pub-head, .pubs .pub-row{ grid-template-columns: 64px 1fr; }
+  .pubs .pub-head, .pubs .pub-row{ grid-template-columns: 64px 1fr; gap: 16px; }
   .pubs .pub-head .pub-note, .pubs .pub-row .pub-note{ display:none; }
 }
 @media (max-width: 560px){
+  .pubs { margin-top: 24px; }
   .pubs .pub-head{ display:none; }
-  .pubs .pub-row{ grid-template-columns: 1fr; gap:10px; padding: 18px 0; }
-  .pubs .pub-year{ order:-1; color:#999; }
+  .pubs .pub-row{ grid-template-columns: 1fr; gap:6px; padding: 14px 0; }
+  .pubs .pub-year{ order:-1; color:#999; font-size:.68rem; }
+  .pubs .pub-title{ font-size:.78rem; }
+  .pubs .pub-title .pub-role{ font-size:.65rem; }
+  .pubs h2 { font-size: 1.1rem; margin: 0 0 12px; }
 }
 
 /* ====== Patch móvil sin cambiar desktop (corregido) ====== */
