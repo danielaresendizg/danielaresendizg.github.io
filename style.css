@@ -234,7 +234,7 @@ section a:active {
   .menu a { padding: 8px 0; }
 
   /* Como la barra ya NO es fija, quitamos el gran padding inferior */
-  .main{
+  .main, .wrapper{
     padding: 24px var(--gutter) 24px;
   }
 
