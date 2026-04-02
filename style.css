@@ -38,6 +38,8 @@ body {
 .menu { display: flex; gap: 28px; }
 .menu a { text-decoration: none; color: #aaa; }
 .menu a:hover { text-decoration: underline; color: #fff; }
+.menu a.lang-switch { color: #00fff9; }
+.menu a.lang-switch:hover { color: #00fff9; opacity: 0.7; }
 
 /* ---------- Main / Grid ---------- */
 .main {
