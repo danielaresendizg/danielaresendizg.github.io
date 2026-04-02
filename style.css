@@ -1,11 +1,14 @@
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
 /* ---------- Base / Reset ---------- */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
-  color: #111;
-  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #fff;
+  background: #000;
   line-height: 1.8;
 }
 
@@ -22,8 +25,8 @@ body {
 /* ---------- Header / Nav ---------- */
 .site-header {
   position: sticky; top: 0;
-  background: #fff;
-  border-bottom: 1px solid #e6e6e6;
+  background: #000;
+  border-bottom: 1px solid #333;
   z-index: 10;
 }
 .navbar {
@@ -33,8 +36,8 @@ body {
 }
 .brand { font-weight: 700; letter-spacing: .2px; font-size: 1.5rem; }
 .menu { display: flex; gap: 28px; }
-.menu a { text-decoration: none; color: #111; }
-.menu a:hover { text-decoration: underline; }
+.menu a { text-decoration: none; color: #aaa; }
+.menu a:hover { text-decoration: underline; color: #fff; }
 
 /* ---------- Main / Grid ---------- */
 .main {
@@ -53,7 +56,7 @@ body {
 /* ---------- Bio text ---------- */
 .bio p { font-size: 0.9rem; margin: 0 0 18px; }
 .bio p strong { font-weight: 650; }
-.bio a { color: #111; text-decoration: underline; }
+.bio a { color: #00fff9; text-decoration: underline; }
 
 /* ---------- Photo ---------- */
 .photo {
@@ -61,41 +64,47 @@ body {
   border-radius: 2px;
   display: block;
   object-fit: cover;
-  box-shadow: 0 0 0 1px #eee;
+  box-shadow: 0 0 0 1px #333;
 }
-.photo-caption { font-size: .8rem; color: #777; margin-top: 8px; }
+.photo-caption { font-size: .8rem; color: #aaa; margin-top: 8px; }
 
 /* ---------- Research interests / Chips ---------- */
 .section-label {
   margin-top: 28px; font-size: .75rem;
-  color: #777; letter-spacing: .04em; text-transform: uppercase;
+  color: #aaa; letter-spacing: .04em; text-transform: uppercase;
 }
 .chips { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
-  padding: 6px 10px; font-size: .56rem; border-radius: 2px;
+  padding: 5px 9px; font-size: .5rem; border-radius: 2px;
   background: #0000FF; color: #FFF; border: 1px solid #00fff9; white-space: nowrap;
+  transition: background .2s ease, box-shadow .2s ease;
+  cursor: default;
+}
+.chip:hover {
+  background: #1a1aff;
+  box-shadow: 0 0 8px rgba(0, 255, 249, 0.4);
 }
 
 /* ---------- Sticky Contact Bar ---------- */
 .contact-bar {
   position: fixed; left: 0; right: 0; bottom: 0;
-  background: #111; color: #fff; border-top: 1px solid #000;
+  background: #000; color: #fff; border-top: 1px solid #333;
 }
 .contact-inner {
   max-width: var(--page-w); margin: 0 auto;
-  display: grid; grid-template-columns: 1fr auto;
+  display: flex; justify-content: flex-end;
   gap: 16px; align-items: center; padding: 14px var(--gutter);
 }
 .contact-title { font-weight: 700; }
 .contact-actions { display: grid; grid-auto-flow: column; gap: 8px; }
 .btn {
-  display: inline-block; padding: 12px 18px; background: #eee; color: #111;
-  text-decoration: none; border-radius: 2px; border: 1px solid #ddd;
+  display: inline-block; padding: 12px 18px; background: transparent; color: #fff;
+  text-decoration: none; border-radius: 2px; border: 1px solid #aaa;
 }
-.btn:hover { background: #f5f5f5; }
+.btn:hover { background: transparent; opacity: 0.6; }
 
 /* ---------- Utility ---------- */
-.muted { color: #666; }
+.muted { color: #aaa; }
 .hidden-mobile { display: inline; }
 @media (max-width: 520px) { .hidden-mobile { display: none; } }
 
@@ -139,7 +148,7 @@ body {
 .cv article{ margin: 0 0 var(--cv-gap); }
 
 /* Destacar cargo/fechas dentro del artículo */
-.cv em{ font-style: italic; color: #333; }
+.cv em{ font-style: italic; color: #aaa; }
 
 /* Variante compacta para listas muy largas (opcional) */
 /*
@@ -170,22 +179,23 @@ section a:active {
 .pubs .pub-head,
 .pubs .pub-row{
   display: grid;
-  grid-template-columns: 64px 1.6fr 1fr 1fr; /* Año | Título | Rol | Nota breve */
+  grid-template-columns: 64px 1.6fr 1fr; /* Año | Título+Rol | Nota */
   gap: 28px;
   padding: 20px 0;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #333;
 }
 
 /* Encabezado */
 .pubs .pub-head{
-  color:#888; font-size:.6rem; text-transform:uppercase; letter-spacing:.05em; font-weight:300;
+  color:#666; font-size:.6rem; text-transform:uppercase; letter-spacing:.05em; font-weight:300;
   padding-top: 6px; padding-bottom: 6px;
 }
 
 /* Tipos de texto */
-.pubs .pub-year{ color:#666; font-weight:300; font-size:.7rem; }
-.pubs .pub-title{ font-size:.7rem; line-height:1.7; }
-.pubs .pub-role, .pubs .pub-note{ font-size:.7rem; line-height:1.7; color:#333; }
+.pubs .pub-year{ color:#aaa; font-weight:300; font-size:.7rem; }
+.pubs .pub-title{ font-size:.82rem; line-height:1.6; color:#fff; }
+.pubs .pub-title .pub-role{ display:block; font-size:.68rem; color:#aaa; margin-top:4px; font-weight:300; }
+.pubs .pub-note{ font-size:.72rem; line-height:1.6; color:#aaa; }
 
 /* Título/enlace */
 .pubs .pub-link{
@@ -195,8 +205,7 @@ section a:active {
 /* Responsive */
 @media (max-width: 960px){
   .pubs .pub-head, .pubs .pub-row{ grid-template-columns: 64px 1fr; }
-  .pubs .pub-head .role, .pubs .pub-head .note{ display:none; }
-  .pubs .pub-row .pub-role, .pubs .pub-row .pub-note{ grid-column: 2; }
+  .pubs .pub-head .pub-note, .pubs .pub-row .pub-note{ display:none; }
 }
 @media (max-width: 560px){
   .pubs .pub-head{ display:none; }
@@ -234,28 +243,21 @@ section a:active {
   .photo { max-width: 100%; }
   .chip { font-size: .5rem; padding: 7px 12px; }
 
-  /* ===== CONTACTO: compacto y en una columna ===== */
+  /* ===== CONTACTO: compacto en móvil ===== */
   .contact-bar{ position: static; font-size: clamp(12px, 3.4vw, 14px) !important; }
   .contact-inner{
-    grid-template-columns: 1fr;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 6px;
-    padding: 8px
-             calc(var(--gutter) + env(safe-area-inset-right))
+    padding: 10px calc(var(--gutter) + env(safe-area-inset-right))
              calc(10px + env(safe-area-inset-bottom))
              calc(var(--gutter) + env(safe-area-inset-left));
   }
-  .contact-title{ font-weight: 700; font-size: 1rem; }
-  .contact-actions{
-    grid-auto-flow: row;
-    grid-template-columns: 1fr; /* 1 botón por fila */
-    gap: 6px;
-  }
+  .contact-actions{ flex-wrap: wrap; justify-content: center; gap: 6px; }
   .btn{
-    width: 100%;
-    padding: 10px 12px;
+    padding: 10px 14px;
     line-height: 1.2;
-    font-size: .95em;
-    border-radius: 4px;
+    font-size: .9em;
   }
 }
 
@@ -279,7 +281,7 @@ section a:active {
 .menu a:focus-visible,
 .btn:focus-visible,
 .chip:focus-visible{
-  outline: 2px solid #111;
+  outline: 2px solid #00fff9;
   outline-offset: 2px;
 }
 
@@ -299,10 +301,10 @@ section a:active {
 }
 .project-thumb{
   position:relative;
-  aspect-ratio: 4 / 3;           /* recorte consistente; ajusta si quieres 16/9 */
+  aspect-ratio: 1 / 1;
   overflow:hidden;
-  border-radius:12px;
-  background:#f2f2f2;
+  border-radius:2px;
+  background:#111;
 }
 .project-thumb img{
   width:100%;
@@ -326,7 +328,19 @@ section a:active {
 }
 .project-caption{
   margin-top:8px;
-  font-size:.95rem;
-  text-align:center;
-  font-style: oblique;
+  text-align:left;
+}
+.project-name{
+  display:block;
+  font-size:.8rem;
+  color:#fff;
+  line-height:1.4;
+}
+.project-location{
+  display:block;
+  font-size:.65rem;
+  color:#aaa;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  margin-top:3px;
 }
