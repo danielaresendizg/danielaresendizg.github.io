@@ -174,16 +174,15 @@ section a:active {
   text-decoration: none; /* Nunca subrayado */
 }
 
-/* ========== PUBLICACIONES (4 columnas) ========== */
+/* ========== PUBLICACIONES / TEACHING ========== */
 .pubs { margin-top: 40px; }
 
-/* Encabezado y filas: SIEMPRE 4 columnas */
 .pubs .pub-head,
 .pubs .pub-row{
   display: grid;
-  grid-template-columns: 64px 1.6fr 1fr; /* Año | Título+Rol | Nota */
-  gap: 28px;
-  padding: 20px 0;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+  padding: 18px 0;
   border-bottom: 1px solid #333;
 }
 
@@ -197,26 +196,21 @@ section a:active {
 .pubs .pub-year{ color:#aaa; font-weight:300; font-size:.7rem; }
 .pubs .pub-title{ font-size:.82rem; line-height:1.6; color:#fff; }
 .pubs .pub-title .pub-role{ display:block; font-size:.68rem; color:#aaa; margin-top:4px; font-weight:300; }
-.pubs .pub-note{ font-size:.72rem; line-height:1.6; color:#aaa; }
+.pubs .pub-note{ display:block; font-size:.68rem; line-height:1.5; color:#666; margin-top:4px; }
 
 /* Título/enlace */
 .pubs .pub-link{
   color:inherit; text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px;
 }
 
-/* Responsive */
-@media (max-width: 960px){
-  .pubs .pub-head, .pubs .pub-row{ grid-template-columns: 64px 1fr; gap: 16px; }
-  .pubs .pub-head .pub-note, .pubs .pub-row .pub-note{ display:none; }
-}
+/* Responsive móvil */
 @media (max-width: 560px){
   .pubs { margin-top: 24px; }
-  .pubs .pub-head{ display:none; }
-  .pubs .pub-row{ grid-template-columns: 1fr; gap:6px; padding: 14px 0; }
-  .pubs .pub-year{ order:-1; color:#999; font-size:.68rem; }
-  .pubs .pub-title{ font-size:.78rem; }
-  .pubs .pub-title .pub-role{ font-size:.65rem; }
-  .pubs h2 { font-size: 1.1rem; margin: 0 0 12px; }
+  .pubs .pub-row{ grid-template-columns: 48px 1fr; gap: 12px; padding: 14px 0; }
+  .pubs .pub-year{ font-size:.65rem; }
+  .pubs .pub-title{ font-size:.75rem; }
+  .pubs .pub-title .pub-role{ font-size:.62rem; }
+  .pubs .pub-note{ font-size:.62rem; }
 }
 
 /* ====== Patch móvil sin cambiar desktop (corregido) ====== */
